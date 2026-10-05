@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" fill="none" role="img" aria-label="AI coding tools connecting to a compatible gateway">
+  <defs>
+    <linearGradient id="kcBrand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="kcCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f7f8fb"/>
+    </linearGradient>
+    <linearGradient id="kcFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6366f1" stop-opacity="0"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0.55"/>
+    </linearGradient>
+    <filter id="kcShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="26" flood-color="#4f46e5" flood-opacity="0.20"/>
+    </filter>
+    <filter id="kcChipShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#312e81" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <!-- ambient blobs -->
+  <circle cx="150" cy="120" r="96" fill="#6366f1" fill-opacity="0.10"/>
+  <circle cx="600" cy="410" r="120" fill="#a855f7" fill-opacity="0.10"/>
+
+  <!-- connection lines -->
+  <path d="M96 150 C 190 150, 200 232, 268 232" stroke="url(#kcFade)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="7 8"/>
+  <path d="M96 300 C 190 300, 200 268, 268 268" stroke="url(#kcFade)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="7 8"/>
+  <path d="M624 168 C 540 168, 520 226, 452 226" stroke="url(#kcFade)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="7 8" transform="rotate(180 538 197)"/>
+  <path d="M624 330 C 540 330, 520 274, 452 274" stroke="url(#kcFade)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="7 8" transform="rotate(180 538 302)"/>
+
+  <!-- main terminal card -->
+  <g filter="url(#kcShadow)">
+    <rect x="140" y="86" width="440" height="336" rx="18" fill="url(#kcCard)" stroke="#e5e7eb"/>
+  </g>
+  <path d="M140 104a18 18 0 0 1 18-18h404a18 18 0 0 1 18 18v34H140z" fill="#eef0f7"/>
+  <circle cx="172" cy="112" r="6" fill="#f87171"/>
+  <circle cx="194" cy="112" r="6" fill="#fbbf24"/>
+  <circle cx="216" cy="112" r="6" fill="#34d399"/>
+  <rect x="252" y="104" width="150" height="16" rx="8" fill="#dcdff0"/>
+
+  <!-- prompt line -->
+  <path d="M178 178l16 12-16 12" stroke="url(#kcBrand)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="212" y="182" width="128" height="14" rx="7" fill="#c7d2fe"/>
+  <rect x="350" y="182" width="60" height="14" rx="7" fill="#e0e7ff"/>
+
+  <!-- code lines -->
+  <rect x="178" y="222" width="286" height="13" rx="6.5" fill="#e0e7ff"/>
+  <rect x="178" y="250" width="196" height="13" rx="6.5" fill="#ddd6fe"/>
+  <rect x="178" y="278" width="330" height="13" rx="6.5" fill="#e0e7ff"/>
+  <rect x="178" y="306" width="240" height="13" rx="6.5" fill="#c7d2fe"/>
+  <rect x="178" y="334" width="300" height="13" rx="6.5" fill="#ede9fe"/>
+  <rect x="178" y="362" width="150" height="13" rx="6.5" fill="#e0e7ff"/>
+  <rect x="336" y="362" width="10" height="13" rx="5" fill="url(#kcBrand)"/>
+
+  <!-- floating tool chips -->
+  <g filter="url(#kcChipShadow)">
+    <rect x="34" y="126" width="132" height="48" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="62" cy="150" r="10" fill="url(#kcBrand)"/>
+    <rect x="82" y="144" width="62" height="12" rx="6" fill="#c7d2fe"/>
+  </g>
+  <g filter="url(#kcChipShadow)">
+    <rect x="34" y="276" width="132" height="48" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="62" cy="300" r="10" fill="#a855f7"/>
+    <rect x="82" y="294" width="62" height="12" rx="6" fill="#ddd6fe"/>
+  </g>
+  <g filter="url(#kcChipShadow)">
+    <rect x="554" y="144" width="132" height="48" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="576" y="162" width="62" height="12" rx="6" fill="#c7d2fe"/>
+    <circle cx="660" cy="168" r="10" fill="url(#kcBrand)"/>
+  </g>
+  <g filter="url(#kcChipShadow)">
+    <rect x="554" y="306" width="132" height="48" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+    <rect x="576" y="324" width="62" height="12" rx="6" fill="#ddd6fe"/>
+    <circle cx="660" cy="330" r="10" fill="#a855f7"/>
+  </g>
+
+  <!-- status pill -->
+  <g filter="url(#kcChipShadow)">
+    <rect x="264" y="446" width="192" height="44" rx="22" fill="#ffffff" stroke="#e5e7eb"/>
+    <circle cx="290" cy="468" r="7" fill="#34d399"/>
+    <rect x="308" y="462" width="120" height="12" rx="6" fill="#d1d5db"/>
+  </g>
+</svg>

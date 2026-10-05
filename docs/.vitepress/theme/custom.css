@@ -166,3 +166,65 @@
   font-size: 0.8em;
   transform: translateY(-1px);
 }
+
+/* Home hero: tighter type scale and a softer image frame */
+.VPHero .name {
+  font-size: 38px;
+  line-height: 1.15;
+}
+
+.VPHero .text {
+  font-size: 40px;
+  line-height: 1.2;
+  max-width: 620px;
+}
+
+.VPHero .tagline {
+  max-width: 560px;
+}
+
+.VPHero .image-container {
+  transform: translate(0, 0);
+}
+
+.VPHero .image-bg {
+  background: transparent;
+}
+
+.VPHero .VPImage.image-src {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media (min-width: 960px) {
+  .VPHero .container {
+    align-items: center;
+  }
+
+  .VPHero .main {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 959px) {
+  .VPHero .name {
+    font-size: 32px;
+  }
+
+  .VPHero .text {
+    font-size: 32px;
+  }
+}
+
+/* Home: make feature cards feel clickable */
+.VPFeatures .VPFeature.link {
+  height: 100%;
+}
+
+.VPFeatures .VPFeature.link .link-text-value {
+  transition: transform 0.2s;
+}
+
+.VPFeatures .VPFeature.link:hover .link-text-value {
+  transform: translateX(3px);
+}

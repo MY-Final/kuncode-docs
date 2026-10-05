@@ -3,23 +3,53 @@ layout: home
 
 hero:
   name: AI 编程工具接入指南
-  text: 让 Codex、Claude Code、OpenCode、Copilot CLI 接入官方 API 或兼容网关
-  tagline: 通用配置参考 · KunCode 仅作示例 · 不绑定服务
+  text: 把 Codex、Claude Code、OpenCode 等工具接上你自己的模型服务
+  tagline: 通用配置参考 · 示例可替换 · 不绑定任何服务
+  image:
+    src: /hero.svg
+    alt: AI 编程工具连接兼容网关示意图
   actions:
     - theme: brand
       text: 新手从这里开始
       link: /beginner/
     - theme: alt
-      text: 工具列表
+      text: 浏览工具列表
       link: /tools/
+    - theme: alt
+      text: 遇到问题
+      link: /faq
 
 features:
-  - title: 按服务来源上手
-    details: 官方 API、自建兼容网关、第三方兼容服务都有对应的准备路径。
-  - title: 示例可替换
-    details: 配置片段按通用格式编写；把示例地址和 Key 换成你自己的服务即可。
-  - title: 排障指引
-    details: 401、404、模型不存在、超时等常见问题给出定位步骤。
+  - icon: 🚀
+    title: 零基础上手
+    details: 不知道装什么、不会命令行也没关系，让 AI 帮你安装和配置。
+    link: /beginner/
+    linkText: 开始上手
+  - icon: 🧰
+    title: 按工具找教程
+    details: 13 个 AI 编程工具的接入步骤、配置字段和排障方法。
+    link: /tools/
+    linkText: 查看工具
+  - icon: 🔌
+    title: 接入自己的服务
+    details: 官方 API、自建兼容网关、第三方兼容服务都能按同一套思路接入。
+    link: /guide/endpoints
+    linkText: 选择协议
+  - icon: 🔐
+    title: Key 安全与成本
+    details: 如何安全保存和轮换密钥，以及怎么避免额度跑飞。
+    link: /guide/security
+    linkText: 查看安全指南
+  - icon: 🛠️
+    title: 排障指引
+    details: 401、404、429、超时、模型不存在等常见问题，按状态码定位。
+    link: /guide/errors
+    linkText: 开始排障
+  - icon: 🆓
+    title: 免费与试用
+    details: 先用免费额度跑通，再决定要不要付费。
+    link: /beginner/free-models
+    linkText: 查看免费方案
 ---
 
 ::: info 文档定位
