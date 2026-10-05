@@ -65,6 +65,41 @@ The Anthropic Messages endpoint returns a different shape:
 }
 ```
 
+## Context and output limits
+
+`/v1/models` usually tells you only whether a key can currently see a model. It does not necessarily return the context window, maximum output or price. Those limits are determined by the actual model, channel and gateway configuration.
+
+Keep these limits separate:
+
+| Limit | Meaning | How to check |
+| --- | --- | --- |
+| **Context window** | Maximum combined input + output for one request | Service model documentation, console model details or the actual error |
+| **Maximum output** | Maximum tokens generated in one reply | Service or model documentation; `max_tokens` / `max_output_tokens` in a request must not exceed it |
+| **Request body limit** | Gateway or upstream limit on HTTP body size | Retry with fewer attachments, less history or a smaller input |
+| **Client-side limit** | A context or output limit built into Claude Code, Codex or another client | Tool documentation; you may need to configure the client when the gateway model window differs from its default |
+
+When a limit is exceeded, gateways may return `400`, `413` or an upstream-specific error. The message may contain `context_length_exceeded`, `max_tokens` or `too large`. Do not rely on the status code alone: read the response `code` and `message`, and follow the actual service's documentation.
+
+::: tip Do not infer the window from the model name
+The same model name can have different context windows, output limits and billing across channels. Use the actual service response or documentation rather than assuming a `128k` or `200k` name guarantees a particular limit.
+:::
+
+## What `/v1/models` does not promise
+
+The main purpose of `/v1/models` is to return the **model IDs visible to the current credential**. Fields other than `id` should not be treated as a complete capability inventory.
+
+It usually does not guarantee:
+
+- Context window, maximum output or request body limit
+- Input, output, cache or reasoning token prices
+- Model ratio, group ratio or final billed amount
+- Whether tool call, vision, reasoning, streaming or attachments are supported
+- Which protocol endpoints the model supports, such as Chat Completions, Responses or Anthropic Messages
+- Rate limits, concurrency limits, availability or current channel health
+- A one-to-one mapping between `owned_by` and the real upstream provider
+
+A model ID in the list only means it may be available to the current key and group. Whether it works in your tool still depends on the endpoint, channel state, model limits, quota and the capabilities the tool needs. Check the service documentation, console or actual request result, and treat the service as authoritative when in doubt.
+
 ## How to pick a model
 
 Filter in this order:
@@ -132,17 +167,33 @@ Model names are case-sensitive, and `-` is not interchangeable with `_`. The saf
 
 ## Common questions
 
-### The name is right, but it says the model does not exist
+### Model missing or request failing: diagnostic tree
 
-The name is right, but **the current group has no channel serving it**. The server returns 503, not 404.
+Work through these steps instead of assuming every "model does not exist" message is a model-name problem:
 
-Check:
+1. **Check the request URL and protocol endpoint**
+   - Confirm the tool's Base URL follows [Choose an endpoint](./endpoints#base-url-reference).
+   - If `/v1/models` also returns `404`, check the Base URL, endpoint path and whether the service implements that protocol.
+   - If the final URL contains `/v1/v1/...`, remove the duplicate `/v1`.
 
-1. Whether the key's group is one you may use
-2. Whether another group works
-3. Whether `/v1/models` really lists it
+2. **Check the model ID and the current key/group**
+   - Copy the complete `id` from `/v1/models`; do not type an alias or guess the case.
+   - If the model is not listed, the current group may not serve it, the key's model limits may exclude it, or the service may have no billing/channel configuration for it.
+   - If it is listed but the request still fails, continue.
 
-See [Errors and troubleshooting](./errors#_503-service-unavailable).
+3. **Classify by the response**
+   - `404`: commonly a Base URL or endpoint path problem, though the model or endpoint may genuinely not exist; read the response body.
+   - `403`: commonly group permission, a key model limit or an IP allowlist problem.
+   - `401`, insufficient quota or rate limiting: gateways may use `401`, `402`, `429` or another status; check account balance, key quota and rate limits.
+   - `503`: commonly no usable channel in the current group, a transient upstream failure, or a model that does not support the selected protocol.
+   - `400` / `413`: commonly parameters, context window or request body size; inspect `code` and `message`.
+   - Other `5xx`: treat as a transient upstream failure and retry or switch model/channel while checking service logs.
+
+4. **Finally check capabilities and protocol**
+   - Chat support does not imply tool call, reasoning, streaming or the protocol you are using.
+   - The same model may behave differently over different endpoints; switch to the endpoint recommended for your tool when needed.
+
+Status and error codes vary by gateway implementation; this page lists common mappings only. If the cause is still unclear, keep the full response, request time and model ID for the service provider.
 
 ### The tool reports a tool-call failure
 

@@ -206,7 +206,7 @@ copilot help providers
 
 ## 进阶：Anthropic 与 Azure
 
-如果网关提供的是 Anthropic Messages 入口，把 provider 类型改成 `anthropic`：
+如果网关提供的是 Anthropic Messages 入口，把 provider 类型改成 `anthropic`。注意：Anthropic provider 模式的 Base URL 写法与 OpenAI 模式不同，这里只写域名；OpenAI 模式仍按上文带 `/v1`。
 
 ```bash
 export COPILOT_PROVIDER_TYPE="anthropic"

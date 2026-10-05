@@ -4,3 +4,6 @@ docs/.vitepress/cache
 docs/.vitepress/.temp
 .DS_Store
 *.log
+
+# Playwright MCP browser artifacts
+.playwright-mcp/

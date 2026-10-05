@@ -1,11 +1,13 @@
 # 工具列表
 
-| 工具 | 推荐入口 | 配置方式 | 说明 |
-| --- | --- | --- | --- |
-| [Codex](./codex) | Responses | `~/.codex/config.toml` | OpenAI 官方 CLI，支持自定义 provider |
-| [Claude Code](./claude-code) | Anthropic Messages | `~/.claude/settings.json` | Anthropic 官方 CLI |
-| [OpenCode](./opencode) | Responses | `opencode.json` | 开源终端编程助手 |
-| [GitHub Copilot CLI](./copilot) | Chat Completions / Responses | 环境变量 | GitHub 官方终端编程助手，支持 BYOK |
+| 工具 | 支持协议 | 推荐入口 | 主配置位置 | 凭据位置 | Windows 安装 |
+| --- | --- | --- | --- | --- | --- |
+| [Codex](./codex) | Responses | Responses | `~/.codex/config.toml` | 配置文件或环境变量 | npm |
+| [Claude Code](./claude-code) | Anthropic Messages | Anthropic Messages | `~/.claude/settings.json` | 配置文件或环境变量 | npm |
+| [OpenCode](./opencode) | Responses / Chat Completions | Responses | `opencode.json` | `auth.json` | npm |
+| [GitHub Copilot CLI](./copilot) | Chat Completions / Responses / Anthropic | Chat Completions | 环境变量（进阶支持 `providers.json`） | 环境变量或 providers 配置 | WinGet |
+
+> 表中的路径是各工具的默认位置。具体版本可能不同，以对应工具页为准。
 
 ## 通用步骤
 

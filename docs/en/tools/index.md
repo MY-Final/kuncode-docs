@@ -1,11 +1,13 @@
 # Tools
 
-| Tool | Endpoint | Configuration | Notes |
-| --- | --- | --- | --- |
-| [Codex](./codex) | Responses | `~/.codex/config.toml` | OpenAI CLI with custom providers |
-| [Claude Code](./claude-code) | Anthropic Messages | `~/.claude/settings.json` | Anthropic CLI |
-| [OpenCode](./opencode) | Responses | `opencode.json` | Open-source terminal assistant |
-| [GitHub Copilot CLI](./copilot) | Chat Completions / Responses | Environment variables | GitHub terminal assistant with BYOK |
+| Tool | Supported protocols | Recommended | Main config | Credentials | Windows install |
+| --- | --- | --- | --- | --- | --- |
+| [Codex](./codex) | Responses | Responses | `~/.codex/config.toml` | Config file or environment variable | npm |
+| [Claude Code](./claude-code) | Anthropic Messages | Anthropic Messages | `~/.claude/settings.json` | Config file or environment variable | npm |
+| [OpenCode](./opencode) | Responses / Chat Completions | Responses | `opencode.json` | `auth.json` | npm |
+| [GitHub Copilot CLI](./copilot) | Chat Completions / Responses / Anthropic | Chat Completions | Environment variables (advanced: `providers.json`) | Environment variables or provider config | WinGet |
+
+> Paths above are each tool's default locations. They can differ by version; check the tool page.
 
 ## Common steps
 

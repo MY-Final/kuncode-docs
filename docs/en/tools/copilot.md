@@ -206,7 +206,7 @@ For a systematic walkthrough by status code, see [Errors and troubleshooting](/e
 
 ## Advanced: Anthropic and Azure
 
-If your gateway exposes the Anthropic Messages endpoint, set the provider type to `anthropic`:
+If your gateway exposes the Anthropic Messages endpoint, set the provider type to `anthropic`. Note that Anthropic provider mode uses a different Base URL convention: enter the domain only here, while OpenAI mode still uses the `/v1` value shown above.
 
 ```bash
 export COPILOT_PROVIDER_TYPE="anthropic"

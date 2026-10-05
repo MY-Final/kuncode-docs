@@ -11,9 +11,19 @@ const base = process.env.BASE_PATH || '/'
 const zhNav = [
   { text: '开始使用', link: '/guide/' },
   { text: '工具接入', link: '/tools/' },
-  { text: '常见问题', link: '/faq' },
-  { text: '关于', link: '/about' },
-  { text: 'KunCode', link: 'https://kuncode.120403.xyz' },
+  {
+    text: '排障',
+    items: [
+      { text: '常见问题', link: '/faq' },
+      { text: '错误码与排障', link: '/guide/errors' },
+    ],
+  },
+  {
+    text: 'KunCode 控制台',
+    link: 'https://kuncode.120403.xyz',
+    target: '_blank',
+    rel: 'noreferrer',
+  },
 ]
 
 const zhSidebar = [
@@ -21,9 +31,9 @@ const zhSidebar = [
     text: '开始使用',
     items: [
       { text: '概览', link: '/guide/' },
+      { text: '概念说明', link: '/guide/concepts' },
       { text: '准备 API Key', link: '/guide/api-key' },
       { text: '选择接入方式', link: '/guide/endpoints' },
-      { text: '概念说明', link: '/guide/concepts' },
       { text: '模型与能力', link: '/guide/models' },
     ],
   },
@@ -32,20 +42,10 @@ const zhSidebar = [
     collapsed: false,
     items: [
       { text: '工具列表', link: '/tools/' },
-      {
-        text: 'OpenAI 兼容',
-        collapsed: false,
-        items: [
-          { text: 'Codex', link: '/tools/codex' },
-          { text: 'OpenCode', link: '/tools/opencode' },
-          { text: 'GitHub Copilot CLI', link: '/tools/copilot' },
-        ],
-      },
-      {
-        text: 'Anthropic 兼容',
-        collapsed: false,
-        items: [{ text: 'Claude Code', link: '/tools/claude-code' }],
-      },
+      { text: 'Codex', link: '/tools/codex' },
+      { text: 'Claude Code', link: '/tools/claude-code' },
+      { text: 'OpenCode', link: '/tools/opencode' },
+      { text: 'GitHub Copilot CLI', link: '/tools/copilot' },
     ],
   },
   {
@@ -53,17 +53,30 @@ const zhSidebar = [
     items: [
       { text: '常见问题', link: '/faq' },
       { text: '错误码与排障', link: '/guide/errors' },
-      { text: '关于本文档', link: '/about' },
     ],
+  },
+  {
+    text: '关于',
+    items: [{ text: '关于本文档', link: '/about' }],
   },
 ]
 
 const enNav = [
   { text: 'Getting Started', link: '/en/guide/' },
   { text: 'Tools', link: '/en/tools/' },
-  { text: 'FAQ', link: '/en/faq' },
-  { text: 'About', link: '/en/about' },
-  { text: 'KunCode', link: 'https://kuncode.120403.xyz' },
+  {
+    text: 'Troubleshooting',
+    items: [
+      { text: 'FAQ', link: '/en/faq' },
+      { text: 'Errors & Troubleshooting', link: '/en/guide/errors' },
+    ],
+  },
+  {
+    text: 'KunCode Console',
+    link: 'https://kuncode.120403.xyz',
+    target: '_blank',
+    rel: 'noreferrer',
+  },
 ]
 
 const enSidebar = [
@@ -71,9 +84,9 @@ const enSidebar = [
     text: 'Getting Started',
     items: [
       { text: 'Overview', link: '/en/guide/' },
+      { text: 'Concepts', link: '/en/guide/concepts' },
       { text: 'Prepare an API Key', link: '/en/guide/api-key' },
       { text: 'Choose an Endpoint', link: '/en/guide/endpoints' },
-      { text: 'Concepts', link: '/en/guide/concepts' },
       { text: 'Models & Capabilities', link: '/en/guide/models' },
     ],
   },
@@ -82,20 +95,10 @@ const enSidebar = [
     collapsed: false,
     items: [
       { text: 'Tools', link: '/en/tools/' },
-      {
-        text: 'OpenAI-compatible',
-        collapsed: false,
-        items: [
-          { text: 'Codex', link: '/en/tools/codex' },
-          { text: 'OpenCode', link: '/en/tools/opencode' },
-          { text: 'GitHub Copilot CLI', link: '/en/tools/copilot' },
-        ],
-      },
-      {
-        text: 'Anthropic-compatible',
-        collapsed: false,
-        items: [{ text: 'Claude Code', link: '/en/tools/claude-code' }],
-      },
+      { text: 'Codex', link: '/en/tools/codex' },
+      { text: 'Claude Code', link: '/en/tools/claude-code' },
+      { text: 'OpenCode', link: '/en/tools/opencode' },
+      { text: 'GitHub Copilot CLI', link: '/en/tools/copilot' },
     ],
   },
   {
@@ -103,8 +106,11 @@ const enSidebar = [
     items: [
       { text: 'FAQ', link: '/en/faq' },
       { text: 'Errors & Troubleshooting', link: '/en/guide/errors' },
-      { text: 'About', link: '/en/about' },
     ],
+  },
+  {
+    text: 'About',
+    items: [{ text: 'About These Docs', link: '/en/about' }],
   },
 ]
 

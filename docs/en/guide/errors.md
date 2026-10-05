@@ -33,6 +33,21 @@ The Anthropic Messages endpoint returns:
 
 Read the HTTP status code first, then the `type` / `code` field, then the `message`.
 
+## Quota and error codes
+
+`code` / `type` naming can vary between gateways. The table below establishes a troubleshooting order; it does not replace your provider's documentation. If a code cannot be confirmed, use the gateway's actual response as the source of truth.
+
+| HTTP status | Typical `code` / `type` | Meaning | Retry? | User action |
+| --- | --- | --- | --- | --- |
+| 401 / 403 (use the actual gateway response) | `insufficient_user_quota` | Account balance or token quota is insufficient and the request was rejected | No; top up or adjust quota first | Check both account balance and the current key's token quota; check whether pre-authorization is holding part of the balance |
+| 400 (some gateways use 413) | `context_length_exceeded` | Input, output, or their sum exceeds the model context limit | No; shorten the request first | Reduce history, attachments, or the output limit, or switch to a model with a longer context window |
+| 429 | `rate_limit_exceeded` | A request-rate, concurrency, or model-level limit was reached | Yes, after backoff | Check `Retry-After`, lower concurrency, or request a higher limit |
+| 529 (some gateways map it to 429 or 503) | `overloaded_error` | The Anthropic-compatible upstream is overloaded; the gateway may pass it through or rewrite it | Yes, with limited retries after a short backoff | Retry later, lower concurrency, or switch model or channel |
+
+::: warning Do not infer quota only from the status code
+Insufficient balance, exhausted token quota, a disabled key, and rate limiting may use the same or adjacent HTTP status codes. Record the HTTP status, `code` / `type`, `message`, and request time together to distinguish them.
+:::
+
 ## Client errors (4xx)
 
 ### 400 Bad Request
@@ -101,6 +116,13 @@ Common causes:
 - **Model restricted** - the key has model limits and the requested model is not allowed
 - **User disabled** - the account itself is disabled
 
+Use these minimum steps to distinguish the permission type:
+
+1. Request `/v1/models` with the same key. If that also returns 403, check account status and group permission first.
+2. If the list works but one model returns 403, check the key's model limits and whether the group serves that model.
+3. If the message mentions IP, allowlist, or source address, verify the egress IP seen by the gateway. A proxy, CDN, or corporate network can change it.
+4. If the response does not identify the cause, do not guess. Give the provider the request time, model, endpoint, egress IP, and full error body.
+
 ### 404 Not Found
 
 The address does not exist.
@@ -152,7 +174,23 @@ Rate limited. Two kinds:
 429 means "you are going too fast". Retrying right away usually fails again. Wait for `Retry-After`, or back off exponentially.
 :::
 
+Minimum steps:
+
+1. Check for `Retry-After`; if present, wait that long.
+2. Without `Retry-After`, use exponential backoff with jitter and cap the number of retries.
+3. Lower concurrency and repeated requests in a short window, then see whether the issue still reproduces.
+4. If only one model triggers it, investigate a model-level limit. If every model triggers it, investigate an account or gateway-level limit.
+5. If it persists, record the time range, model, concurrency, and error body for the provider to confirm the limit.
+
 ## Server errors (5xx)
+
+Handle 5xx in this order so a transient upstream failure does not turn into repeated requests:
+
+1. Record the HTTP status, `code` / `type`, request time, model, endpoint, and request ID.
+2. Back off briefly and retry at most once to see whether it reproduces.
+3. If another model or channel recovers, the issue is likely limited to one upstream or channel.
+4. If every model keeps returning 5xx, stop automatic retries and contact the provider.
+5. If a streaming response already emitted partial output, confirm the duplicate-billing rules before retrying blindly.
 
 ### 500 Internal Server Error
 
@@ -202,6 +240,29 @@ The upstream took too long.
 
 Shrink the request (shorter context, smaller output) or retry later. For long requests, raise the timeout on the tool side; each tool page has an "Adjust the timeout" section.
 
+### 529 Overloaded (Anthropic-compatible endpoints)
+
+An Anthropic-compatible endpoint may return 529 or `overloaded_error` for an overloaded upstream. Some gateways rewrite it as 429 or 503, so use the actual HTTP status and `code` / `type` as the source of truth.
+
+Back off briefly, lower concurrency, or switch model or channel. If it persists, report it as a 5xx using the information below.
+
+## Streaming, timeouts, and retries
+
+Streaming timeout behavior depends on the client, SDK, and gateway. When there is no explicit documentation, use these signals:
+
+- **Total timeout**: the request is cut off after a fixed total duration, even if data keeps arriving.
+- **Idle timeout**: it is cut off only after no new data arrives for a period; continuous output normally does not trigger it.
+- **If uncertain**: record the request start time, the time the last data was received, and the time of interruption, then compare them with the tool configuration.
+
+Whether an interrupted SSE request is billed, whether pre-authorization is refunded, and whether emitted output counts toward usage depend on the provider's settlement rules and request log. This page does not assume any platform's billing behavior.
+
+Retry notes:
+
+- 4xx usually indicates a request problem and should not be retried automatically. For 429, use `Retry-After` or exponential backoff.
+- 5xx can be retried a limited number of times, but the gateway may already have sent the request upstream, so a retry may be billed twice.
+- After a streaming request has emitted partial output, do not retry blindly until you know whether it creates a second upstream request.
+- If unsure, check the request ID in the bill and logs before deciding to retry or report the issue.
+
 ## Troubleshooting per tool
 
 | Tool | Entry |
@@ -220,6 +281,7 @@ Work through this order; it locates most problems:
 3. **Is the group allowed?** Check you may access the group set on the key
 4. **Is there enough quota?** Check both account balance and key quota
 5. **Is the tool config right?** Base URL, config file path, credential variable name
+6. **Is the report complete?** Include the request ID / trace ID, request time with timezone, model, endpoint, HTTP status, and full error body; never include an unredacted key
 
 ## Next
 

@@ -92,7 +92,7 @@ Usually `1`.
 ::: tip Both levels are checked
 A request checks **account balance** and **key quota**; failing either one fails the request.
 
-Unlimited quota only removes the key-level limit. It does not make the account balance infinite.
+**Unlimited quota only removes the key-level limit and remains subject to the account balance.** If the account balance is too low, the request is rejected even when the key has unlimited quota.
 :::
 
 ### Quota
@@ -196,6 +196,29 @@ cost ≈ usage × model ratio × group ratio
 
 Output tokens are further multiplied by the completion ratio, and cached tokens by the cache ratio.
 
+To turn a ratio into money, you first need the **base unit price used by that service**. Base prices, units, rounding and treatment of cache/reasoning tokens differ between services. This documentation does not embed any provider's price list. The following is a worked example with hypothetical numbers only:
+
+Assume:
+
+- Base input price: `$0.000002 / token`
+- Model ratio: `1.5`
+- Group ratio: `0.8`
+- Completion ratio for output tokens: `4`
+- This request: `10,000` input tokens and `2,000` output tokens, with `1,000` input tokens served from cache
+- Cache ratio: `0.25`, and cached tokens are still charged at the input base price
+
+Estimate:
+
+```
+uncached input = 9,000 × 0.000002 × 1.5 × 0.8 = 0.0216
+cached input   = 1,000 × 0.000002 × 1.5 × 0.8 × 0.25 = 0.0006
+output         = 2,000 × 0.000002 × 1.5 × 0.8 × 4 = 0.0192
+
+estimated total ≈ 0.0414 (the service's bill is authoritative)
+```
+
+The real amount also depends on the service's billing rules, rounding and final settlement.
+
 ::: tip Why the same model costs different amounts
 The model ratio is the same, but the group ratio differs, so the final price differs.
 
@@ -223,14 +246,32 @@ Streaming or long requests usually **pre-charge** part of the quota, then **sett
 
 So a log may show the pre-charged amount first and the final amount later. That is normal.
 
+Whether the following cases are billed, and how much, differs between services. **Treat the service as authoritative:**
+
+- A request fails after the upstream has already produced tokens
+- A streaming request is interrupted after partial output
+- The client times out or cancels the request
+- An automatic retry succeeds only on one attempt
+- Concurrent requests occupy several pre-charge holds
+
+When reconciling a bill, keep the request time, model ID, request ID and the pre-charge/settlement log entries, then compare them with the service bill.
+
 ### When quota runs out
 
 | Case | Result |
 | --- | --- |
-| Key quota exhausted | The key stops working, `401` |
-| Account balance too low | Request rejected |
+| Key quota exhausted | The key usually becomes temporarily unusable, commonly `401`; recovery depends on the service |
+| Account balance too low | Request rejected, commonly `401`, `402` or another status |
 | Key expired | The key stops working, `401` |
 | Key disabled | The key stops working, `401` |
+
+::: warning Recovering from exhausted quota
+Whether an exhausted key quota can be restored by raising the quota, topping up or editing the key **depends on the service**.
+
+If the service allows raising the key quota, you usually do not need to recreate the key. If it treats exhaustion as permanent or does not allow editing the key, delete and recreate it, then update every client configuration.
+
+Whether recovery is immediate or requires a client restart also depends on the service. Do not diagnose it by retrying repeatedly; check the console and logs first.
+:::
 
 ## Security and best practices
 
@@ -263,7 +304,11 @@ The model is not in the current group's available list. Query `/v1/models` for t
 
 Possible causes: key quota exhausted, key expired, no permission for the group, model restricted, IP not allowlisted.
 
-Check in this order: `/status` for the active credential → key quota → group permission → model limits → IP allowlist.
+Check in this order: confirm the active credential → key quota → group permission → model limits → IP allowlist.
+
+::: tip `/status` is not a universal HTTP endpoint
+`/status` is a slash command in clients such as Claude Code. It shows the configuration and credential that client has loaded. It is not a universal HTTP endpoint provided by every compatible gateway, and it is not an endpoint defined by this documentation. For other tools, use that tool's diagnostics or the console.
+:::
 
 ## Cheat sheet
 

@@ -1,27 +1,41 @@
 # About These Docs
 
-## A general-purpose guide
+## What this guide is
 
-This site documents how AI coding tools - Codex, Claude Code, OpenCode, GitHub Copilot CLI and others - connect to model APIs.
+This is a **provider-agnostic setup guide** for connecting Codex, Claude Code, OpenCode, GitHub Copilot CLI and similar tools to official APIs, self-hosted compatible gateways or third-party compatible services.
 
-It is open to everyone:
+It covers portable protocols, configuration patterns and troubleshooting. Addresses, keys and model names are swappable placeholders. Account signup, key issuance, billing and support are handled by your service provider.
 
-- **You do not need to use KunCode.** Apply the same steps to a self-hosted gateway, a third-party service, or an official API.
-- All addresses, keys and model names shown here are swappable placeholders.
-- Protocol notes, config formats and troubleshooting are provider-agnostic.
+## Supported service sources
 
-## Why KunCode appears in examples
+| Service source | How to prepare the key and address |
+| --- | --- |
+| Official API | Create credentials in the OpenAI, Anthropic or other official platform console, then confirm the model names and API protocol |
+| Self-hosted compatible gateway | Create or configure a key according to the gateway's deployment docs, and use your gateway domain as the service address |
+| Third-party compatible service | Sign in to that provider's console, create a key, and copy the API endpoint and available model names from the console |
 
-So that snippets can actually run, most demos use KunCode as the reference address.
+If you cannot find a console or key-creation page, follow your provider's documentation. This guide covers client configuration and troubleshooting only; it does not replace provider documentation.
 
-It is only an example. Swap in any compatible service and the configuration still holds.
+## Where KunCode fits
+
+Some examples use KunCode as a reference service so the configuration snippets are easier to follow.
+
+KunCode is only an **optional example**. It is not required and it is not the only compatible service. The same configuration patterns apply after you replace it with another compatible service. For the value each tool expects, use that tool's setup page and the Base URL guidance in [Choose an endpoint](/en/guide/endpoints).
+
+## What this site covers
+
+- Explaining common protocol endpoints, configuration fields and error messages
+- Providing replaceable configuration examples and troubleshooting steps
+- Helping you isolate key, address, model and network issues on the client side
+
+This site does not provide account signup, key issuance, top-ups, refunds or provider support. Those are handled by your service provider's console and documentation.
 
 ## Open and shareable
 
 We believe setup documentation should not be tied to one platform.
 
-If this saves you even one debugging session, it does not matter whether you use KunCode.
+If this saves you even one debugging session, it does not matter whether you use KunCode. You are welcome to reference, repost or adapt it.
 
 ## Feedback
 
-Spotted an error or want to add a tool? Issues and pull requests are welcome.
+Spotted an error, want to add a tool, or have a common question to suggest? Issues and pull requests are welcome. Never paste a real API key into a public issue.
