@@ -3,7 +3,7 @@
 | 工具 | 推荐入口 | 配置方式 | 说明 |
 | --- | --- | --- | --- |
 | [Codex](./codex) | Responses | `~/.codex/config.toml` | OpenAI 官方 CLI，支持自定义 provider |
-| [Claude Code](./claude-code) | Anthropic Messages | 环境变量 | Anthropic 官方 CLI |
+| [Claude Code](./claude-code) | Anthropic Messages | `~/.claude/settings.json` | Anthropic 官方 CLI |
 | [OpenCode](./opencode) | Responses | `opencode.json` | 开源终端编程助手 |
 
 ## 通用步骤

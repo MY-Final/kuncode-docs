@@ -11,7 +11,7 @@ Compatible gateways usually expose several protocol entry points. Tools differ i
 ## Which one
 
 - **Codex** - use the Responses endpoint, Base URL points at the root.
-- **Claude Code** - use the Anthropic Messages endpoint via environment variables.
+- **Claude Code** - use the Anthropic Messages endpoint, overriding the official address in `settings.json`.
 - **OpenCode** - use the Responses endpoint with a custom provider.
 
 ## Authentication

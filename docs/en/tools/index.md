@@ -3,7 +3,7 @@
 | Tool | Endpoint | Configuration | Notes |
 | --- | --- | --- | --- |
 | [Codex](./codex) | Responses | `~/.codex/config.toml` | OpenAI CLI with custom providers |
-| [Claude Code](./claude-code) | Anthropic Messages | Environment variables | Anthropic CLI |
+| [Claude Code](./claude-code) | Anthropic Messages | `~/.claude/settings.json` | Anthropic CLI |
 | [OpenCode](./opencode) | Responses | `opencode.json` | Open-source terminal assistant |
 
 ## Common steps

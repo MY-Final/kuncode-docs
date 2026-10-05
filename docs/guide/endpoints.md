@@ -13,7 +13,7 @@
 ## 怎么选
 
 - **Codex**：优先使用 Responses 入口，Base URL 填到根路径。
-- **Claude Code**：使用 Anthropic Messages 入口，通过环境变量覆盖官方地址。
+- **Claude Code**：使用 Anthropic Messages 入口，在 `settings.json` 里覆盖官方地址。
 - **OpenCode**：使用 Responses 入口，在配置文件里声明 provider。
 
 ## 统一说明
