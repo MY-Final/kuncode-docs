@@ -27,7 +27,7 @@ features:
     linkText: 开始上手
   - icon: 🧰
     title: 按工具找教程
-    details: 13 个 AI 编程工具的接入步骤、配置字段和排障方法。
+    details: 14 个 AI 编程工具的接入步骤、配置字段和排障方法。
     link: /tools/
     linkText: 查看工具
   - icon: 🔌

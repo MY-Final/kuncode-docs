@@ -19,6 +19,7 @@
 | [VS Code + Copilot BYOK](/tools/vscode-copilot) | VS Code | Chat Completions / Responses / Messages | 编码功能必需（取决于模型） | 客户端支持（取决于模型/服务） | 取决于模型/服务 | 支持 | VS Code 免费；模型费用取决于服务商 | 中 | VS Code 用户、需要 Custom endpoint |
 | [Trae](/tools/trae) | IDE | OpenAI Chat Completions / Anthropic Messages | 编码功能必需（取决于模型） | 客户端支持（取决于模型/服务） | 取决于模型/服务 | 支持 Windows 10/11 | 客户端有免费层，额度以官方为准；自定义模型费用取决于服务商 | 低 | 国内用户、偏好中文 IDE |
 | [CodeBuddy](/tools/codebuddy) | IDE / 插件 | OpenAI Chat Completions | 编码功能必需（取决于模型） | 客户端支持（取决于模型/服务） | 取决于模型/服务 | 支持 Windows 10+ | 有免费 / 企业方案，具体以官网为准 | 中 | 国内用户、使用 `models.json` 配置 |
+| [Pi](/tools/piagent) | 终端 | Chat Completions / Responses / Anthropic Messages | 编码功能必需（取决于模型） | 客户端支持（取决于模型/服务） | 取决于模型/服务 | 支持，需 bash（Git Bash 即可） | 开源，可接免费或低成本模型 | 中 | 想要极简、可扩展终端工具的用户 |
 
 > Tool Call、流式和图片输入同时取决于**客户端、协议入口、模型和服务商**，不是工具单方面能保证的。编码类工具要能读写文件、执行命令，模型必须支持 Tool Call；否则只能聊天，不能真正改代码。接入前请以工具、模型和服务商的官方说明为准。
 
@@ -33,6 +34,7 @@
 | 用 JetBrains | [Kilo Code](/tools/kilo-code) | 当前工具页明确支持 JetBrains 扩展形态 |
 | 想要桌面端 | [Goose](/tools/goose) 或 [Cline](/tools/cline) | 工具页明确提供桌面端形态 |
 | 想要最简配置 | [Crush](/tools/crush) | 一条 `crush provider add` 命令即可接入 |
+| 想要极简、可扩展的终端工具 | [Pi](/tools/piagent) | 核心精简，可用 TypeScript 扩展、技能和主题按需定制 |
 | 只想用 Gemini 官方模型 | [Gemini CLI](/tools/gemini-cli) | 使用 Gemini 原生协议，支持 Google 账号登录和 Gemini API Key |
 
 ## 怎么验证一个工具能不能满足需求
