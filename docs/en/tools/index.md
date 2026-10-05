@@ -1,13 +1,18 @@
 # Tools
 
-| Tool | Supported protocols | Recommended | Main config | Credentials | Windows install |
+| Tool | Form | Supported protocols | Main config | Credentials | Windows install |
 | --- | --- | --- | --- | --- | --- |
-| [Codex](./codex) | Responses | Responses | `~/.codex/config.toml` | Config file or environment variable | npm |
-| [Claude Code](./claude-code) | Anthropic Messages | Anthropic Messages | `~/.claude/settings.json` | Config file or environment variable | npm |
-| [OpenCode](./opencode) | Responses / Chat Completions | Responses | `opencode.json` | `auth.json` | npm |
-| [GitHub Copilot CLI](./copilot) | Chat Completions / Responses / Anthropic | Chat Completions | Environment variables (advanced: `providers.json`) | Environment variables or provider config | WinGet |
+| [Codex](./codex) | Terminal | Responses | `~/.codex/config.toml` | Config file or environment variable | npm |
+| [Claude Code](./claude-code) | Terminal | Anthropic Messages | `~/.claude/settings.json` | Config file or environment variable | npm |
+| [OpenCode](./opencode) | Terminal | Responses / Chat Completions | `opencode.json` | `auth.json` | npm |
+| [GitHub Copilot CLI](./copilot) | Terminal | Chat Completions / Responses / Anthropic | Environment variables (advanced: `providers.json`) | Environment variables or provider config | WinGet |
+| [Crush](./crush) | Terminal | OpenAI Compatible / Anthropic Compatible | `crushrc` | Environment variable | winget / scoop / npm |
+| [Goose](./goose) | Terminal + desktop | OpenAI Compatible / Anthropic Compatible / Ollama | `config.yaml` | System credential store or environment variable | Official PowerShell script |
+| [Qwen Code](./qwen-code) | Terminal | OpenAI / Anthropic / Gemini | `~/.qwen/settings.json` | Environment variable or `.env` | PowerShell script / npm |
+| [Cline](./cline) | VS Code / desktop | OpenAI Compatible | Extension settings | Extension credential store | VS Code extension |
+| [Kilo Code](./kilo-code) | VS Code / JetBrains | OpenAI Compatible / Responses / Anthropic | Extension settings | Extension credential store | Editor extension |
 
-> Paths above are each tool's default locations. They can differ by version; check the tool page.
+> Paths and installation methods can change by version; check the tool page and official docs.
 
 ## Common steps
 

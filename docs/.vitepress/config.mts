@@ -56,6 +56,11 @@ const zhSidebar = [
       { text: 'Claude Code', link: '/tools/claude-code' },
       { text: 'OpenCode', link: '/tools/opencode' },
       { text: 'GitHub Copilot CLI', link: '/tools/copilot' },
+      { text: 'Crush', link: '/tools/crush' },
+      { text: 'Goose', link: '/tools/goose' },
+      { text: 'Qwen Code', link: '/tools/qwen-code' },
+      { text: 'Cline', link: '/tools/cline' },
+      { text: 'Kilo Code', link: '/tools/kilo-code' },
     ],
   },
   {
@@ -119,6 +124,11 @@ const enSidebar = [
       { text: 'Claude Code', link: '/en/tools/claude-code' },
       { text: 'OpenCode', link: '/en/tools/opencode' },
       { text: 'GitHub Copilot CLI', link: '/en/tools/copilot' },
+      { text: 'Crush', link: '/en/tools/crush' },
+      { text: 'Goose', link: '/en/tools/goose' },
+      { text: 'Qwen Code', link: '/en/tools/qwen-code' },
+      { text: 'Cline', link: '/en/tools/cline' },
+      { text: 'Kilo Code', link: '/en/tools/kilo-code' },
     ],
   },
   {
