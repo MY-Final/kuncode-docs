@@ -11,6 +11,10 @@
 | [Qwen Code](./qwen-code) | 终端 | OpenAI / Anthropic / Gemini | `~/.qwen/settings.json` | 环境变量或 `.env` | PowerShell 脚本 / npm |
 | [Cline](./cline) | VS Code / 桌面 | OpenAI Compatible | 扩展设置面板 | 扩展凭据存储 | VS Code 扩展 |
 | [Kilo Code](./kilo-code) | VS Code / JetBrains | OpenAI Compatible / Responses / Anthropic | 扩展设置面板 | 扩展凭据存储 | 编辑器扩展 |
+| [Gemini CLI](./gemini-cli) | 终端 | Gemini 原生协议 | `~/.gemini/settings.json` | `.env` / 环境变量 | npm |
+| [VS Code + Copilot BYOK](./vscode-copilot) | VS Code | Chat Completions / Responses / Messages | VS Code 模型管理 | VS Code / 系统凭据 | VS Code |
+| [Trae](./trae) | IDE | OpenAI Chat Completions / Anthropic Messages | 客户端模型设置 | 客户端凭据存储 | Windows 客户端 |
+| [CodeBuddy](./codebuddy) | IDE / 插件 | OpenAI Chat Completions | `models.json` | `models.json` 或客户端凭据 | Windows 客户端 |
 
 > 表中的路径和安装方式可能随版本变化，以对应工具页和官方文档为准。
 

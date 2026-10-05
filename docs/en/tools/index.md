@@ -11,6 +11,10 @@
 | [Qwen Code](./qwen-code) | Terminal | OpenAI / Anthropic / Gemini | `~/.qwen/settings.json` | Environment variable or `.env` | PowerShell script / npm |
 | [Cline](./cline) | VS Code / desktop | OpenAI Compatible | Extension settings | Extension credential store | VS Code extension |
 | [Kilo Code](./kilo-code) | VS Code / JetBrains | OpenAI Compatible / Responses / Anthropic | Extension settings | Extension credential store | Editor extension |
+| [Gemini CLI](./gemini-cli) | Terminal | Gemini native protocol | `~/.gemini/settings.json` | `.env` / environment variable | npm |
+| [VS Code + Copilot BYOK](./vscode-copilot) | VS Code | Chat Completions / Responses / Messages | VS Code model management | VS Code / system credentials | VS Code |
+| [Trae](./trae) | IDE | OpenAI Chat Completions / Anthropic Messages | Client model settings | Client credential store | Windows client |
+| [CodeBuddy](./codebuddy) | IDE / extension | OpenAI Chat Completions | `models.json` | `models.json` or client credentials | Windows client |
 
 > Paths and installation methods can change by version; check the tool page and official docs.
 

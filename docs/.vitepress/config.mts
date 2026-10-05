@@ -61,6 +61,10 @@ const zhSidebar = [
       { text: 'Qwen Code', link: '/tools/qwen-code' },
       { text: 'Cline', link: '/tools/cline' },
       { text: 'Kilo Code', link: '/tools/kilo-code' },
+      { text: 'Gemini CLI', link: '/tools/gemini-cli' },
+      { text: 'VS Code + Copilot BYOK', link: '/tools/vscode-copilot' },
+      { text: 'Trae', link: '/tools/trae' },
+      { text: 'CodeBuddy', link: '/tools/codebuddy' },
     ],
   },
   {
@@ -129,6 +133,10 @@ const enSidebar = [
       { text: 'Qwen Code', link: '/en/tools/qwen-code' },
       { text: 'Cline', link: '/en/tools/cline' },
       { text: 'Kilo Code', link: '/en/tools/kilo-code' },
+      { text: 'Gemini CLI', link: '/en/tools/gemini-cli' },
+      { text: 'VS Code + Copilot BYOK', link: '/en/tools/vscode-copilot' },
+      { text: 'Trae', link: '/en/tools/trae' },
+      { text: 'CodeBuddy', link: '/en/tools/codebuddy' },
     ],
   },
   {
