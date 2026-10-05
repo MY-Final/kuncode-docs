@@ -1,6 +1,8 @@
 # Codex
 
-OpenAI's official CLI, pointed at any compatible gateway through a custom provider.
+OpenAI's official CLI. With a custom provider you can point Codex at any compatible gateway.
+
+This page uses KunCode as the example. Swap in your own service address and it works the same.
 
 ## 1. Install
 
@@ -16,47 +18,177 @@ brew install codex
 
 :::
 
+Check the install:
+
+```bash
+codex --version
+```
+
+Any version string works, e.g. `codex-cli 0.144.6`.
+
 ## 2. Prepare an API key
 
-See [Prepare an API key](/en/guide/api-key).
+See [Prepare an API key](/en/guide/api-key). Note two things:
 
-## 3. Configure
+- **API key** - starts with `sk-`
+- **API endpoint** - your service address, e.g. `https://kuncode.120403.xyz`
 
-Edit `~/.codex/config.toml`:
+## 3. Find the config file
+
+Codex reads its config from `.codex/config.toml` in your home directory:
+
+| OS | Path |
+| --- | --- |
+| macOS / Linux | `~/.codex/config.toml` |
+| Windows | `%USERPROFILE%\.codex\config.toml` |
+
+On Windows you can paste `%USERPROFILE%\.codex` into the File Explorer address bar:
+
+![Codex config file location](/images/codex/config-file.png)
+
+Create a `config.toml` if it does not exist yet.
+
+## 4. Fill in the config
+
+Open `config.toml` in an editor and write:
 
 ```toml
-model = "gpt-5"
 model_provider = "custom"
+model = "deepseek-flash"
+model_reasoning_effort = "xhigh"
 
 [model_providers.custom]
-name = "custom"
-base_url = "https://your-gateway.example.com/v1"
-env_key = "CUSTOM_API_KEY"
+name = "KunCode"
+base_url = "https://kuncode.120403.xyz/v1"
 wire_api = "responses"
+requires_openai_auth = true
+experimental_bearer_token = "sk-xxxxxxxx"
 ```
 
-::: code-group
+![Filled Codex config](/images/codex/config-content.png)
 
-```bash [macOS / Linux]
-export CUSTOM_API_KEY="sk-xxxxxxxx"
-```
+Only a few values need changing:
 
-```powershell [Windows PowerShell]
-$env:CUSTOM_API_KEY = "sk-xxxxxxxx"
-```
+| Field | Meaning |
+| --- | --- |
+| `model` | The model to use; must exist on the service |
+| `base_url` | Your API endpoint plus `/v1` |
+| `experimental_bearer_token` | Replace with your own API key |
+| `name` | Display name for the provider; anything you like |
 
+::: tip base_url must end with /v1
+Write `base_url` as `https://kuncode.120403.xyz/v1`.
+
+Codex appends `/responses` itself, so do not write `/v1/responses`.
 :::
 
-## 4. Verify
+::: warning The key is stored in plain text
+This approach keeps the key in `config.toml` as plain text. So:
+
+- Never commit `config.toml` to Git
+- Mask the key before sharing a screenshot
+
+Prefer environment variables? Use the `env_key` field instead (see Advanced below).
+:::
+
+::: info The extra lines in the screenshot
+`disable_response_storage` and `model_catalog_json` in the screenshot are added by the CC Switch import. You do not need them for a manual setup.
+:::
+
+## 5. Verify
+
+From any directory:
 
 ```bash
 codex exec "print hello"
 ```
 
-## 5. Troubleshooting
+![Codex verification succeeded](/images/codex/verify-success.png)
+
+A normal reply means the setup works. The output also echoes the active model, provider and reasoning effort, which is handy for confirming the config took effect.
+
+## 6. Common settings
+
+### Switch models
+
+Change the `model` field:
+
+```toml
+model = "gpt-5"
+```
+
+List the available models with:
+
+```bash
+curl https://kuncode.120403.xyz/v1/models \
+  -H "Authorization: Bearer sk-xxxxxxxx"
+```
+
+### Adjust reasoning effort
+
+`model_reasoning_effort` controls how hard the model thinks:
+
+| Value | Meaning |
+| --- | --- |
+| `minimal` | Least thinking, fastest |
+| `low` | Low |
+| `medium` | Medium |
+| `high` | High |
+| `xhigh` | Highest |
+
+```toml
+model_reasoning_effort = "xhigh"
+```
+
+::: tip Not every model supports it
+Only reasoning models honour this field. Others ignore it.
+:::
+
+## 7. Troubleshooting
 
 | Symptom | Cause | Fix |
 | --- | --- | --- |
-| `401` | Key missing or wrong | Check the env var name matches `env_key` |
-| `404` | Wrong base_url | Must end with `/v1` and support Responses |
+| `401 Unauthorized` | Key missing or wrong | Check `experimental_bearer_token` holds the full key |
+| `404 Not Found` | Wrong `base_url` | Must end with `/v1` and support the Responses API |
 | Unknown model | Model not available | Use a model from `/v1/models` |
+| Connection timeout | Network or proxy | Check DNS, proxy and firewall |
+| Config ignored | Wrong file path | Must be `~/.codex/config.toml`, not `codex.toml` |
+
+## Advanced: keep the key in an environment variable
+
+To avoid storing the key in the config file:
+
+```toml
+[model_providers.custom]
+name = "KunCode"
+base_url = "https://kuncode.120403.xyz/v1"
+wire_api = "responses"
+env_key = "KUNCODE_API_KEY"
+```
+
+Then set the variable:
+
+::: code-group
+
+```bash [macOS / Linux]
+export KUNCODE_API_KEY="sk-xxxxxxxx"
+```
+
+```powershell [Windows PowerShell]
+$env:KUNCODE_API_KEY = "sk-xxxxxxxx"
+```
+
+:::
+
+To persist it, add the export to `~/.zshrc` or `~/.bashrc`, or set a system environment variable on Windows.
+
+## Advanced: import with CC Switch
+
+If you already use [CC Switch](https://github.com/farion1231/cc-switch) to manage providers, skip the manual config:
+
+1. Open the service's **API Keys** page and find your token
+2. Click **Import to CC Switch**
+3. Choose the **Codex** app and pick a model
+4. Click **Open CC Switch**; the config is written for you
+
+The result is the same as the manual setup above, just without the typing.
