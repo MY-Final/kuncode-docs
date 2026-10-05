@@ -117,6 +117,13 @@ export default defineConfig({
     },
   },
   vite: {
+    // The plugin ships raw .vue files, so it must not be externalized during SSR.
+    ssr: {
+      noExternal: [
+        '@nolebase/vitepress-plugin-enhanced-readabilities',
+        '@nolebase/ui',
+      ],
+    },
     plugins: [
       // Keys match case-insensitively as substrings of the code-group label.
       groupIconVitePlugin({
