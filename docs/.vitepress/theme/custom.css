@@ -1,0 +1,142 @@
+:root {
+  --vp-c-brand-1: #4f46e5;
+  --vp-c-brand-2: #6366f1;
+  --vp-c-brand-3: #818cf8;
+  --vp-c-brand-soft: rgba(99, 102, 241, 0.14);
+
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-alt: #f7f8fb;
+  --vp-c-bg-soft: #f4f5fa;
+
+  --vp-code-block-bg: #f7f8fb;
+  --vp-code-block-divider-color: #e5e7eb;
+
+  --vp-font-family-base:
+    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --vp-font-family-mono:
+    'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo,
+    Consolas, monospace;
+}
+
+.dark {
+  --vp-c-bg: #16171d;
+  --vp-c-bg-alt: #1b1c23;
+  --vp-c-bg-soft: #20212a;
+  --vp-code-block-bg: #1b1c23;
+  --vp-code-block-divider-color: #2e303a;
+}
+
+/* Hero: soft spotlight behind the title */
+.VPHero .name,
+.VPHero .text {
+  letter-spacing: -0.02em;
+}
+
+.VPHero.has-image .container {
+  position: relative;
+}
+
+.VPHome {
+  position: relative;
+}
+
+.VPHome::before {
+  content: '';
+  position: absolute;
+  inset: -6rem 0 auto 0;
+  height: 22rem;
+  pointer-events: none;
+  background: radial-gradient(
+    60% 55% at 50% 0%,
+    rgba(99, 102, 241, 0.16) 0%,
+    rgba(99, 102, 241, 0) 70%
+  );
+}
+
+.dark .VPHome::before {
+  background: radial-gradient(
+    60% 55% at 50% 0%,
+    rgba(99, 102, 241, 0.22) 0%,
+    rgba(99, 102, 241, 0) 70%
+  );
+}
+
+/* Feature cards */
+.VPFeature {
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+  transition:
+    border-color 0.25s,
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+
+.VPFeature:hover {
+  border-color: var(--vp-c-brand-2);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -12px rgba(79, 70, 229, 0.35);
+}
+
+/* Sidebar: section headings stand out */
+.VPSidebarItem.level-0 > .item > .text {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.VPSidebarItem.level-0 {
+  padding-bottom: 6px;
+}
+
+.VPSidebarItem.level-0 + .VPSidebarItem.level-0 {
+  margin-top: 10px;
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 12px;
+}
+
+/* Nav: keep it tidy */
+.VPNavBarMenuLink {
+  font-weight: 500;
+}
+
+/* Content polish */
+.vp-doc h2 {
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc h3 {
+  margin-top: 26px;
+}
+
+.vp-doc div[class*='language-'] {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.vp-doc table {
+  display: table;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.vp-doc tr:nth-child(2n) {
+  background: var(--vp-c-bg-soft);
+}
+
+/* Tip / warning / info blocks */
+.vp-doc .custom-block {
+  border-radius: 10px;
+}
+
+/* Home actions */
+.VPButton.brand {
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.VPButton.alt {
+  border-radius: 10px;
+}

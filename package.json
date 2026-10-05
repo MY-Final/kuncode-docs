@@ -1,0 +1,15 @@
+{
+  "name": "kuncode-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "@iconify-json/simple-icons": "^1.2.99",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-group-icons": "^1.7.6"
+  }
+}
