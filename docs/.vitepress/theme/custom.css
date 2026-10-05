@@ -140,3 +140,20 @@
 .VPButton.alt {
   border-radius: 10px;
 }
+/* Images in docs: subtle frame, and click to zoom via medium-zoom */
+.vp-doc img {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  background: var(--vp-c-bg-alt);
+  cursor: zoom-in;
+}
+
+.medium-zoom-overlay {
+  z-index: 100;
+}
+
+.medium-zoom-image--opened {
+  z-index: 101;
+  border: none;
+  border-radius: 6px;
+}

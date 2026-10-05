@@ -1,6 +1,9 @@
 import '@nolebase/vitepress-plugin-enhanced-readabilities/client/style.css'
 import 'virtual:group-icons.css'
 import DefaultTheme from 'vitepress/theme'
+import mediumZoom from 'medium-zoom'
+import { onMounted, watch, nextTick } from 'vue'
+import { useRoute } from 'vitepress'
 
 import {
   InjectionKey,
@@ -21,6 +24,19 @@ export default {
       'nav-screen-content-after': () =>
         h(NolebaseEnhancedReadabilitiesScreenMenu),
     })
+  },
+  setup() {
+    const route = useRoute()
+    const initZoom = () =>
+      mediumZoom('.vp-doc img:not(.no-zoom)', { background: 'var(--vp-c-bg)' })
+
+    onMounted(() => {
+      initZoom()
+    })
+    watch(
+      () => route.path,
+      () => nextTick(() => initZoom())
+    )
   },
   enhanceApp({ app }) {
     app.provide(InjectionKey, {
