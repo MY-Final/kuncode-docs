@@ -69,3 +69,9 @@ Chinese pages live at the root (`docs/guide/...`); the English mirror lives unde
 - Screenshots live under `docs/public/images/<section>/` and are shared by both languages.
 - Keep the reference address in examples as `https://kuncode.120403.xyz`, but note that it is replaceable.
 - Internal links use root-absolute paths with the right locale prefix, e.g. `/guide/errors` and `/en/guide/errors`.
+
+## License
+
+Documentation content under `docs/` is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](LICENSE). If you redistribute or adapt it, you must give appropriate credit and share your contributions under the same license.
+
+Code in `docs/.vitepress/`, `scripts/`, and configuration files is licensed under the [MIT License](LICENSE-CODE).

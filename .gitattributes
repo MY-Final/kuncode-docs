@@ -1,0 +1,12 @@
+# Normalize line endings so Windows and Linux contributors produce identical diffs.
+* text=auto eol=lf
+
+# Binary assets should never be text-normalized.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary

@@ -7,6 +7,8 @@ import {
 // GitHub Pages project sites live at https://<user>.github.io/<repo>/.
 // The deploy workflow injects BASE_PATH; local dev keeps '/'.
 const base = process.env.BASE_PATH || '/'
+const siteUrl = 'https://120403.xyz/kuncode-docs/'
+const ogImageUrl = `${siteUrl}og-image.png`
 
 const zhNav = [
   { text: '开始使用', link: '/guide/' },
@@ -175,9 +177,34 @@ export default defineConfig({
   description: '一份面向所有人的 AI 编程工具接入参考，不绑定任何服务。',
   cleanUrls: true,
   lastUpdated: true,
+  sitemap: { hostname: siteUrl },
+  transformHead({ page, title, description, siteData }) {
+    if (page === '404.md') return []
+
+    const cleanPath = page
+      .replace(/\.md$/, '')
+      .replace(/(^|\/)index$/, '$1')
+      .replace(/^\/+/, '')
+    const pageUrl = new URL(cleanPath, siteUrl).toString()
+    const siteName = siteData.title ?? ''
+
+    return [
+      ['link', { rel: 'canonical', href: pageUrl }],
+      ['meta', { property: 'og:url', content: pageUrl }],
+      ['meta', { property: 'og:site_name', content: siteName }],
+      ['meta', { property: 'og:title', content: title }],
+      ['meta', { property: 'og:description', content: description }],
+      ['meta', { name: 'twitter:title', content: title }],
+      ['meta', { name: 'twitter:description', content: description }],
+    ]
+  },
   head: [
     ['link', { rel: 'icon', href: base + 'favicon.svg' }],
     ['meta', { name: 'theme-color', content: '#4f46e5' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:image', content: ogImageUrl }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:image', content: ogImageUrl }],
   ],
   markdown: {
     theme: { light: 'github-light', dark: 'github-dark' },
