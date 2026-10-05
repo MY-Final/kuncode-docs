@@ -46,8 +46,8 @@ export default {
         defaultStyle: SpotlightStyle.Aside,
       },
       layoutSwitch: {
-        // Keep both sliders visible by default.
-        defaultMode: LayoutMode.BothWidthAdjustable,
+        // Default to the full-width layout (sidebar and content expand).
+        defaultMode: LayoutMode.FullWidth,
       },
     })
   },
