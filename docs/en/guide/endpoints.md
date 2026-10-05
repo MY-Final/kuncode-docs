@@ -5,14 +5,14 @@ Compatible gateways usually expose several protocol entry points. Tools differ i
 | Endpoint | Path | Typical client |
 | --- | --- | --- |
 | OpenAI Chat Completions | `/v1/chat/completions` | Most OpenAI-compatible tools |
-| OpenAI Responses | `/v1/responses` | Codex, newer OpenAI SDKs |
+| OpenAI Responses | `/v1/responses` | Codex, OpenCode, newer OpenAI SDKs |
 | Anthropic Messages | `/v1/messages` | Claude Code, Anthropic SDKs |
 
 ## Which one
 
 - **Codex** - use the Responses endpoint, Base URL points at the root.
 - **Claude Code** - use the Anthropic Messages endpoint via environment variables.
-- **OpenCode** - use Chat Completions with a custom provider.
+- **OpenCode** - use the Responses endpoint with a custom provider.
 
 ## Authentication
 

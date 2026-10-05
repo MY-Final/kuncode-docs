@@ -4,7 +4,7 @@
 | --- | --- | --- | --- |
 | [Codex](./codex) | Responses | `~/.codex/config.toml` | OpenAI CLI with custom providers |
 | [Claude Code](./claude-code) | Anthropic Messages | Environment variables | Anthropic CLI |
-| [OpenCode](./opencode) | Chat Completions | `opencode.json` | Open-source terminal assistant |
+| [OpenCode](./opencode) | Responses | `opencode.json` | Open-source terminal assistant |
 
 ## Common steps
 
