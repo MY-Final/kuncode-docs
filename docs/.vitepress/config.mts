@@ -28,6 +28,16 @@ const zhNav = [
 
 const zhSidebar = [
   {
+    text: '新手入门',
+    collapsed: false,
+    items: [
+      { text: '零基础上手', link: '/beginner/' },
+      { text: '免费与试用模型', link: '/beginner/free-models' },
+      { text: '让 AI 安装并配置工具', link: '/beginner/first-run' },
+      { text: '配置提示词库', link: '/beginner/prompts' },
+    ],
+  },
+  {
     text: '开始使用',
     items: [
       { text: '概览', link: '/guide/' },
@@ -80,6 +90,16 @@ const enNav = [
 ]
 
 const enSidebar = [
+  {
+    text: 'Start Here',
+    collapsed: false,
+    items: [
+      { text: 'Getting Started from Zero', link: '/en/beginner/' },
+      { text: 'Free and Trial Models', link: '/en/beginner/free-models' },
+      { text: 'Let AI Install and Configure', link: '/en/beginner/first-run' },
+      { text: 'Configuration Prompt Library', link: '/en/beginner/prompts' },
+    ],
+  },
   {
     text: 'Getting Started',
     items: [

@@ -7,8 +7,8 @@ hero:
   tagline: 通用配置参考 · KunCode 仅作示例 · 不绑定服务
   actions:
     - theme: brand
-      text: 开始阅读
-      link: /guide/
+      text: 新手从这里开始
+      link: /beginner/
     - theme: alt
       text: 工具列表
       link: /tools/

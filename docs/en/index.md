@@ -7,8 +7,8 @@ hero:
   tagline: Provider-agnostic setup · KunCode examples only · No vendor lock-in
   actions:
     - theme: brand
-      text: Read the guide
-      link: /en/guide/
+      text: Start here
+      link: /en/beginner/
     - theme: alt
       text: Tools
       link: /en/tools/
