@@ -1,5 +1,9 @@
 # Claude Code
 
+::: info 适用版本
+最后验证：2026-10-06 · Claude Code 2.1.289
+:::
+
 Anthropic 官方 CLI，通过自定义网关把请求指向任何兼容服务。
 
 本文以 KunCode 为例演示，换成你自己的服务地址同样适用。

@@ -1,0 +1,38 @@
+name: 文档错误
+description: 报告文档中的错误、过期内容或死链
+title: "[Doc] "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请勿粘贴真实 API Key、完整服务地址或账号信息。
+  - type: input
+    id: page
+    attributes:
+      label: 相关页面
+      description: 页面链接或文件路径
+      placeholder: https://120403.xyz/kuncode-docs/tools/opencode
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题描述
+      description: 哪里不对？你期望的正确内容是什么？
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 佐证材料
+      description: 官方文档链接、截图或复现步骤（已脱敏）
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: 工具版本 / 系统
+      description: 例如 OpenCode 1.18.34、Windows 11
+    validations:
+      required: false

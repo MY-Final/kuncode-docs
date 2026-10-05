@@ -1,5 +1,9 @@
 # Google Gemini CLI
 
+::: info 适用版本
+最后验证：2026-10-06 · Gemini CLI 0.62.0
+:::
+
 Google 官方开源终端 AI 助手，支持 Google 账号登录、Gemini API Key 和 Vertex AI。
 
 ::: warning 适用范围

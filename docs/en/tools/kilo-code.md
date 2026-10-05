@@ -1,5 +1,9 @@
 # Kilo Code
 
+::: info Tested with
+Last verified: 2026-10-06 · Current stable extension · official docs https://kilocode.ai/docs/
+:::
+
 An open-source AI coding assistant used as a VS Code / JetBrains extension. It supports OpenAI Compatible, OpenAI Responses, and Anthropic Messages APIs, and reaches any compatible gateway.
 
 This page uses KunCode as the example. Swap in your own service address and it works the same. Kilo Code is a graphical tool: everything is configured in the extension's settings panel, with no config file to edit.

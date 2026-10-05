@@ -1,5 +1,9 @@
 # Cline
 
+::: info 适用版本
+最后验证：2026-10-06 · 当前稳定版扩展 · 官方文档 https://docs.cline.bot/
+:::
+
 开源 AI 编程助手，以 VS Code 扩展和桌面端的形式使用，通过 OpenAI Compatible provider 接入任何兼容网关。
 
 本文以 KunCode 为例，换成你自己的服务地址同样适用。Cline 是图形界面工具，配置都在扩展的设置面板里完成，不需要编辑配置文件。

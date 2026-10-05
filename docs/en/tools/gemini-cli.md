@@ -1,5 +1,9 @@
 # Google Gemini CLI
 
+::: info Tested with
+Last verified: 2026-10-06 · Gemini CLI 0.62.0
+:::
+
 Google's open-source terminal AI assistant, with support for Google account login, Gemini API keys, and Vertex AI.
 
 ::: warning Scope

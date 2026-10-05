@@ -1,5 +1,9 @@
 # Cline
 
+::: info Tested with
+Last verified: 2026-10-06 · Current stable extension · official docs https://docs.cline.bot/
+:::
+
 An open-source AI coding assistant used as a VS Code extension and a desktop app. It reaches any compatible gateway through an OpenAI Compatible provider.
 
 This page uses KunCode as the example. Swap in your own service address and it works the same. Cline is a graphical tool: everything is configured in the extension's settings panel, with no config file to edit.

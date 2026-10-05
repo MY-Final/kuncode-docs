@@ -1,5 +1,9 @@
 # Crush
 
+::: info 适用版本
+最后验证：2026-10-06 · Crush 0.97.1
+:::
+
 Charm 出品的开源终端编程助手，可通过 OpenAI 兼容或 Anthropic 兼容 provider 接入自定义网关。
 
 本文以 KunCode 为例，换成你自己的服务地址同样适用。

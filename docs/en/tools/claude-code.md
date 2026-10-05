@@ -1,5 +1,9 @@
 # Claude Code
 
+::: info Tested with
+Last verified: 2026-10-06 · Claude Code 2.1.289
+:::
+
 Anthropic's official CLI, pointed at any compatible service through a custom gateway.
 
 This page uses KunCode as the example. Swap in your own service address and it works the same.

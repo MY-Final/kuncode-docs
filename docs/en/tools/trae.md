@@ -1,5 +1,9 @@
 # Trae
 
+::: info Tested with
+Last verified: 2026-10-06 · Current stable client · official docs https://docs.trae.ai/ide/models; Trae CN not verified
+:::
+
 An AI coding IDE / editor that can connect to a compatible gateway through a custom model.
 
 This page uses KunCode as the example. Swap in your own service address and it works the same. The Trae UI changes between versions; use the current client for the exact menu names and field locations.

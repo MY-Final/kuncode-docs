@@ -38,4 +38,12 @@ If this saves you even one debugging session, it does not matter whether you use
 
 ## Feedback
 
-Spotted an error, want to add a tool, or have a common question to suggest? Issues and pull requests are welcome. Never paste a real API key into a public issue.
+Spotted an error, want to add a tool, or have a common question to suggest? Use GitHub:
+
+- [Report a documentation bug](https://github.com/MY-Final/kuncode-docs/issues/new?template=doc-bug.yml)
+- [Request a new tool](https://github.com/MY-Final/kuncode-docs/issues/new?template=tool-request.yml)
+- [Browse all issues](https://github.com/MY-Final/kuncode-docs/issues)
+
+You can also use the "Edit this page" link at the bottom of any page to open a pull request.
+
+Never paste a real API key, a full service address or account details into an issue; redact error output first.

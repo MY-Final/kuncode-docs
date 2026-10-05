@@ -1,5 +1,9 @@
 # Qwen Code
 
+::: info Tested with
+Last verified: 2026-10-06 · Qwen Code 0.25.0
+:::
+
 An open-source terminal coding assistant that speaks OpenAI, Anthropic, Gemini and other protocols, and can reach any compatible gateway through a custom provider.
 
 This page uses KunCode as the example. Swap in your own service address and it works the same.

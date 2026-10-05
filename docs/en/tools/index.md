@@ -1,5 +1,25 @@
 # Tools
 
+## Not sure which to pick?
+
+Match your situation:
+
+| Your situation | Recommended | Why |
+| --- | --- | --- |
+| Complete beginner, want free credit first | [OpenCode](./opencode) or [Crush](./crush) | Easy install, short config, works with free or low-cost models |
+| China network, want a Chinese UI | [Qwen Code](./qwen-code), [Trae](./trae) or [CodeBuddy](./codebuddy) | Stable access in China, Chinese docs and UI |
+| You use VS Code | [Cline](./cline), [Kilo Code](./kilo-code) or [VS Code + Copilot BYOK](./vscode-copilot) | Works inside the editor with a graphical setup |
+| You use JetBrains | [Kilo Code](./kilo-code) or [Junie](https://www.jetbrains.com/junie/) | JetBrains plugin, officially supported |
+| You want a desktop app | [Goose](./goose) or [Cline](./cline) | Standalone desktop client, no terminal needed |
+| You want the simplest setup | [Crush](./crush) | One `crush provider add` command |
+| You use an OpenAI account | [Codex](./codex) | OpenAI's official CLI |
+| You use an Anthropic account | [Claude Code](./claude-code) | Anthropic's official CLI |
+| You use a GitHub account | [GitHub Copilot CLI](./copilot) or [VS Code + Copilot BYOK](./vscode-copilot) | GitHub's official ecosystem |
+| You only use Gemini models | [Google Gemini CLI](./gemini-cli) | Gemini native protocol with a free tier |
+
+::: tip Pick one
+Do not install several tools at once. Get one working first.
+:::
 | Tool | Form | Supported protocols | Main config | Credentials | Windows install |
 | --- | --- | --- | --- | --- | --- |
 | [Codex](./codex) | Terminal | Responses | `~/.codex/config.toml` | Config file or environment variable | npm |

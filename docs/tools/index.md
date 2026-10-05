@@ -1,5 +1,25 @@
 # 工具列表
 
+## 不知道选哪个？
+
+按你的情况对号入座：
+
+| 你的情况 | 推荐工具 | 为什么 |
+| --- | --- | --- |
+| 完全新手，想先用免费额度跑通 | [OpenCode](./opencode) 或 [Crush](./crush) | 安装简单，配置短，支持免费或低成本模型 |
+| 国内网络，想要中文界面 | [Qwen Code](./qwen-code)、[Trae](./trae) 或 [CodeBuddy](./codebuddy) | 国内访问稳定，中文文档和界面 |
+| 用 VS Code | [Cline](./cline)、[Kilo Code](./kilo-code) 或 [VS Code + Copilot BYOK](./vscode-copilot) | 直接在编辑器里用，图形界面配置 |
+| 用 JetBrains | [Kilo Code](./kilo-code) 或 [Junie](https://www.jetbrains.com/junie/) | JetBrains 插件形态，官方支持 |
+| 想要桌面端应用 | [Goose](./goose) 或 [Cline](./cline) | 有独立桌面客户端，不依赖终端 |
+| 想要最简配置 | [Crush](./crush) | 一条 `crush provider add` 命令即可接入 |
+| 用 OpenAI 官方账号 | [Codex](./codex) | OpenAI 官方 CLI |
+| 用 Anthropic 官方账号 | [Claude Code](./claude-code) | Anthropic 官方 CLI |
+| 用 GitHub 账号 | [GitHub Copilot CLI](./copilot) 或 [VS Code + Copilot BYOK](./vscode-copilot) | GitHub 官方生态 |
+| 只想用 Gemini 官方模型 | [Google Gemini CLI](./gemini-cli) | Gemini 原生协议，有免费层 |
+
+::: tip 选一个就够了
+第一次不要同时装多个工具。选一个跑通，再考虑其他。
+:::
 | 工具 | 形态 | 支持协议 | 主配置位置 | 凭据位置 | Windows 安装 |
 | --- | --- | --- | --- | --- | --- |
 | [Codex](./codex) | 终端 | Responses | `~/.codex/config.toml` | 配置文件或环境变量 | npm |

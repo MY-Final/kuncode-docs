@@ -1,5 +1,9 @@
 # Goose
 
+::: info 适用版本
+最后验证：2026-10-06 · Goose 1.53.0
+:::
+
 开源本地 AI Agent，支持桌面端、CLI 和 API。它可以通过 OpenAI Compatible、Anthropic Compatible、Ollama 或自定义 provider 接入兼容网关。
 
 本文以 KunCode 为例，换成你自己的服务地址同样适用。

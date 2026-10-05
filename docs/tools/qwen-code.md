@@ -1,5 +1,9 @@
 # Qwen Code
 
+::: info 适用版本
+最后验证：2026-10-06 · Qwen Code 0.25.0
+:::
+
 开源终端编程助手，支持 OpenAI、Anthropic、Gemini 等多种协议，可以通过自定义 provider 接入任何兼容网关。
 
 本文以 KunCode 为例演示，换成你自己的服务地址同样适用。

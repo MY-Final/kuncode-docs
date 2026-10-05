@@ -1,5 +1,9 @@
 # GitHub Copilot CLI
 
+::: info Tested with
+Last verified: 2026-10-06 · GitHub Copilot CLI 1.0.91
+:::
+
 GitHub's official terminal coding assistant. With BYOK (Bring Your Own Key) you can point its model requests at any compatible gateway.
 
 This page uses KunCode as the example. Swap in your own service address and it works the same. No screenshots are needed here; everything is configured from the terminal.

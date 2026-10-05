@@ -1,5 +1,9 @@
 # CodeBuddy (Tencent Cloud Code Assistant)
 
+::: info Tested with
+Last verified: 2026-10-06 · Current stable client · official docs https://codebuddy.cn/docs/ide/Features/models
+:::
+
 Tencent Cloud's AI coding assistant. It can connect to custom models through a user-level or project-level `models.json` file.
 
 This page uses KunCode as the example. Swap in your own service address and it works the same. The CodeBuddy UI and config fields can change between versions; refer to the current client and official docs.

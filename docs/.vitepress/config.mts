@@ -232,6 +232,10 @@ export default defineConfig({
         },
       },
     },
+    editLink: {
+      pattern: 'https://github.com/MY-Final/kuncode-docs/edit/main/docs/:path',
+      text: '在 GitHub 上编辑此页',
+    },
     docFooter: { prev: '上一篇', next: '下一篇' },
     darkModeSwitchLabel: '外观',
     returnToTopLabel: '回到顶部',
@@ -254,6 +258,10 @@ export default defineConfig({
         nav: enNav,
         sidebar: enSidebar,
         outline: { level: [2, 3], label: 'On this page' },
+        editLink: {
+          pattern: 'https://github.com/MY-Final/kuncode-docs/edit/main/docs/:path',
+          text: 'Edit this page on GitHub',
+        },
         docFooter: { prev: 'Previous', next: 'Next' },
         darkModeSwitchLabel: 'Appearance',
         returnToTopLabel: 'Return to top',

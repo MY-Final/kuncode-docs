@@ -1,5 +1,9 @@
 # GitHub Copilot CLI
 
+::: info 适用版本
+最后验证：2026-10-06 · GitHub Copilot CLI 1.0.91
+:::
+
 GitHub 官方终端编程助手。开启 BYOK（Bring Your Own Key）后，可以把模型请求指向任何兼容网关。
 
 本文以 KunCode 为例演示，换成你自己的服务地址同样适用。这一页不需要截图，所有配置都在终端里完成。

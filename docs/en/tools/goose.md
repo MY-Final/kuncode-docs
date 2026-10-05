@@ -1,5 +1,9 @@
 # Goose
 
+::: info Tested with
+Last verified: 2026-10-06 · Goose 1.53.0
+:::
+
 An open-source local AI agent with a desktop app, CLI, and API. It can connect to compatible gateways through OpenAI Compatible, Anthropic Compatible, Ollama, or custom providers.
 
 This page uses KunCode as the example. Swap in your own service address and it works the same.

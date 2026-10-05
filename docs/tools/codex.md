@@ -1,5 +1,9 @@
 # Codex
 
+::: info 适用版本
+最后验证：2026-10-06 · Codex CLI 0.160.0
+:::
+
 OpenAI 官方 CLI。通过自定义 provider，可以把 Codex 指向任何兼容网关。
 
 本文以 KunCode 为例演示，换成你自己的服务地址同样适用。

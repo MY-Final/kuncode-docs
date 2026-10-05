@@ -1,5 +1,9 @@
 # CodeBuddy（腾讯云代码助手）
 
+::: info 适用版本
+最后验证：2026-10-06 · 当前稳定版客户端 · 官方文档 https://codebuddy.cn/docs/ide/Features/models
+:::
+
 腾讯云推出的 AI 编程助手，支持通过用户级或项目级 `models.json` 接入自定义模型。
 
 本文以 KunCode 为例，换成你自己的服务地址同样适用。CodeBuddy 的界面和配置字段可能随版本变化，具体以当前客户端和官方文档为准。

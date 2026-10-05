@@ -38,4 +38,12 @@ KunCode 只是一个**可选示例**，不是前置条件，也不是唯一支�
 
 ## 反馈
 
-发现错误、想补充工具或希望增加常见问题，欢迎提 issue 或 PR。反馈时请勿粘贴真实 API Key。
+发现错误、想补充工具或希望增加常见问题，欢迎通过 GitHub 反馈：
+
+- [报告文档错误](https://github.com/MY-Final/kuncode-docs/issues/new?template=doc-bug.yml)
+- [请求新增工具](https://github.com/MY-Final/kuncode-docs/issues/new?template=tool-request.yml)
+- [查看全部 issue](https://github.com/MY-Final/kuncode-docs/issues)
+
+也可以直接点击任意页面底部的「编辑此页」提交 PR。
+
+反馈时请勿粘贴真实 API Key、完整服务地址或账号信息；需要提供报错时请先脱敏。

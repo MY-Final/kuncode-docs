@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 使用问题 / 排障
+    url: https://github.com/MY-Final/kuncode-docs/issues
+    about: 先搜索已有 issue，避免重复提问。提问时请勿粘贴真实 API Key。
+  - name: KunCode 控制台
+    url: https://kuncode.120403.xyz
+    about: 开户、充值、Key、额度等平台问题请联系服务商。

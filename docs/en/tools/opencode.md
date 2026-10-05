@@ -1,5 +1,9 @@
 # OpenCode
 
+::: info Tested with
+Last verified: 2026-10-06 · OpenCode 1.18.34
+:::
+
 An open-source terminal coding assistant that reaches any compatible gateway through a custom provider.
 
 This page uses KunCode as the example. Swap in your own service address and it works the same. The setup below was verified on Windows.

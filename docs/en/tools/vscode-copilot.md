@@ -1,5 +1,9 @@
 # VS Code + GitHub Copilot BYOK
 
+::: info Tested with
+Last verified: 2026-10-06 · Current stable VS Code · official docs https://code.visualstudio.com/docs/copilot/customization/language-models
+:::
+
 Use GitHub Copilot Chat in VS Code with a custom model service through BYOK (Bring Your Own Key) or a **Custom endpoint**. VS Code itself is free; model usage is billed by the provider you choose. Some Copilot features still require a GitHub account or subscription; refer to the official documentation for details.
 
 This page uses KunCode as the example. Swap in your own service address and it works the same. The configuration UI can change between VS Code releases; use the current VS Code version and the official documentation as the source of truth.

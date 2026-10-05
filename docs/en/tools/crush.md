@@ -1,5 +1,9 @@
 # Crush
 
+::: info Tested with
+Last verified: 2026-10-06 · Crush 0.97.1
+:::
+
 An open-source terminal coding assistant from Charm that can connect to custom gateways through OpenAI-compatible or Anthropic-compatible providers.
 
 This page uses KunCode as the example. Swap in your own service address and it works the same.

@@ -1,5 +1,9 @@
 # Kilo Code
 
+::: info 适用版本
+最后验证：2026-10-06 · 当前稳定版扩展 · 官方文档 https://kilocode.ai/docs/
+:::
+
 开源 AI 编程助手，以 VS Code / JetBrains 扩展的形式使用，支持 OpenAI Compatible、OpenAI Responses、Anthropic Messages 三种接口，可接入任何兼容网关。
 
 本文以 KunCode 为例，换成你自己的服务地址同样适用。Kilo Code 是图形界面工具，配置都在扩展的设置面板里完成，不需要编辑配置文件。
