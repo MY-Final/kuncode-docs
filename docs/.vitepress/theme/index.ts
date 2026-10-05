@@ -14,6 +14,8 @@ import {
 } from '@nolebase/vitepress-plugin-enhanced-readabilities/client'
 import { h } from 'vue'
 
+import DocLicense from './DocLicense.vue'
+
 import './custom.css'
 
 export default {
@@ -23,6 +25,7 @@ export default {
       'nav-bar-content-after': () => h(NolebaseEnhancedReadabilitiesMenu),
       'nav-screen-content-after': () =>
         h(NolebaseEnhancedReadabilitiesScreenMenu),
+      'layout-bottom': () => h(DocLicense),
     })
   },
   setup() {
