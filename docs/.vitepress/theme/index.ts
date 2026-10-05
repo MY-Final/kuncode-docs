@@ -30,7 +30,8 @@ export default {
         defaultStyle: SpotlightStyle.Aside,
       },
       layoutSwitch: {
-        defaultMode: LayoutMode.Original,
+        // Keep both sliders visible by default.
+        defaultMode: LayoutMode.BothWidthAdjustable,
       },
     })
   },
