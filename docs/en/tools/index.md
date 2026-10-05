@@ -36,7 +36,7 @@ Do not install several tools at once. Get one working first.
 | [Trae](./trae) | IDE | OpenAI Chat Completions / Anthropic Messages | Client model settings | Client credential store | Windows client |
 | [CodeBuddy](./codebuddy) | IDE / extension | OpenAI Chat Completions | `models.json` | `models.json` or client credentials | Windows client |
 
-> Paths and installation methods can change by version; check the tool page and official docs.
+> Paths and installation methods can change by version; check the tool page and official docs. For the full capability, protocol and platform comparison, see [Tool Comparison](./compare).
 
 ## Common steps
 

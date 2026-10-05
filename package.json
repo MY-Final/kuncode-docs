@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
-    "preview": "vitepress preview docs"
+    "preview": "vitepress preview docs",
+    "check": "node scripts/check-docs.mjs",
+    "verify": "npm run build && npm run check"
   },
   "devDependencies": {
     "@iconify-json/simple-icons": "^1.2.99",

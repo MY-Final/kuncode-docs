@@ -26,10 +26,22 @@ jobs:
           bun-version: latest
       - name: Install dependencies
         run: bun install --frozen-lockfile
+      - name: Check whitespace
+        run: |
+          BEFORE="${{ github.event.before }}"
+          if git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            git diff --check "$BEFORE" "${{ github.sha }}"
+          else
+            git diff --check HEAD~1 HEAD || git diff --check
+          fi
+
       - name: Build
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
         run: bun run build
+
+      - name: Check docs (links, anchors, locale parity, tool wiring)
+        run: bun run check
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

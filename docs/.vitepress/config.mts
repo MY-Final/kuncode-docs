@@ -45,6 +45,10 @@ const zhSidebar = [
       { text: '准备 API Key', link: '/guide/api-key' },
       { text: '选择接入方式', link: '/guide/endpoints' },
       { text: '模型与能力', link: '/guide/models' },
+      { text: '配置后怎么用', link: '/guide/usage' },
+      { text: 'API Key 安全与轮换', link: '/guide/security' },
+      { text: '网络、代理与自定义 CA', link: '/guide/network' },
+      { text: '成本控制', link: '/guide/cost-control' },
     ],
   },
   {
@@ -52,6 +56,7 @@ const zhSidebar = [
     collapsed: false,
     items: [
       { text: '工具列表', link: '/tools/' },
+      { text: '工具能力对比', link: '/tools/compare' },
       { text: 'Codex', link: '/tools/codex' },
       { text: 'Claude Code', link: '/tools/claude-code' },
       { text: 'OpenCode', link: '/tools/opencode' },
@@ -83,6 +88,7 @@ const zhSidebar = [
 const enNav = [
   { text: 'Getting Started', link: '/en/guide/' },
   { text: 'Tools', link: '/en/tools/' },
+      { text: 'Tool Comparison', link: '/en/tools/compare' },
   {
     text: 'Troubleshooting',
     items: [
@@ -117,6 +123,10 @@ const enSidebar = [
       { text: 'Prepare an API Key', link: '/en/guide/api-key' },
       { text: 'Choose an Endpoint', link: '/en/guide/endpoints' },
       { text: 'Models & Capabilities', link: '/en/guide/models' },
+      { text: 'After Setup: How to Use It', link: '/en/guide/usage' },
+      { text: 'API Key Security and Rotation', link: '/en/guide/security' },
+      { text: 'Network, Proxy and Custom CA', link: '/en/guide/network' },
+      { text: 'Cost Control', link: '/en/guide/cost-control' },
     ],
   },
   {
