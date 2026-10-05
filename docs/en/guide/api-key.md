@@ -74,6 +74,8 @@ Replace the address and key with your own. A model list means the key is fine.
 
 ## Next
 
+To understand API keys, groups and ratios first, read [Concepts](./concepts).
+
 Once the key and address are ready, continue with your tool:
 
 - [Codex setup](/en/tools/codex)

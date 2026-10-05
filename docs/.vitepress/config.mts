@@ -22,6 +22,7 @@ const zhSidebar = [
       { text: '概览', link: '/guide/' },
       { text: '准备 API Key', link: '/guide/api-key' },
       { text: '选择接入方式', link: '/guide/endpoints' },
+      { text: '概念说明', link: '/guide/concepts' },
     ],
   },
   {
@@ -67,6 +68,7 @@ const enSidebar = [
       { text: 'Overview', link: '/en/guide/' },
       { text: 'Prepare an API Key', link: '/en/guide/api-key' },
       { text: 'Choose an Endpoint', link: '/en/guide/endpoints' },
+      { text: 'Concepts', link: '/en/guide/concepts' },
     ],
   },
   {

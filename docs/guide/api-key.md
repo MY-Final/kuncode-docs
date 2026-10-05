@@ -74,6 +74,8 @@ curl https://kuncode.120403.xyz/v1/models \
 
 ## 接下来
 
+想先弄清 API Key、分组、倍率这些概念，看[概念说明](./concepts)。
+
 Key 和服务地址都准备好后，按你要用的工具继续：
 
 - [Codex 配置教程](/tools/codex)

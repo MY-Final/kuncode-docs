@@ -28,4 +28,5 @@ Some pages use KunCode as a demo, which is just one option among many.
 
 - [Prepare an API key](./api-key)
 - [Choose an endpoint](./endpoints)
+- [Concepts](./concepts)
 - [Tools](/en/tools/)

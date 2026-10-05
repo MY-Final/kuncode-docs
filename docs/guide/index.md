@@ -10,6 +10,8 @@
 2. **选择协议入口**：确认工具支持的协议，是 OpenAI Chat Completions、OpenAI Responses 还是 Anthropic Messages。
 3. **填写配置并验证**：把 Base URL 和 Key 写进工具的配置文件，用一条命令确认能跑通。
 
+不熟悉 API Key、分组、渠道、倍率这些概念？先看[概念说明](./concepts)。
+
 ## 你需要准备什么
 
 | 项目 | 说明 |
@@ -28,4 +30,5 @@
 
 - [准备 API Key](./api-key)
 - [选择接入方式](./endpoints)
+- [概念说明](./concepts)
 - [工具列表](/tools/)
