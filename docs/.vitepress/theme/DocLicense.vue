@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useData } from 'vitepress'
+import { useData, withBase } from 'vitepress'
 
 const { lang } = useData()
 
@@ -11,7 +11,9 @@ const currentYear = new Date().getFullYear()
 const yearRange =
   currentYear > startYear ? `${startYear}-${currentYear}` : `${startYear}`
 
-const disclaimerUrl = computed(() => (isEnglish.value ? '/en/disclaimer' : '/disclaimer'))
+const disclaimerUrl = computed(() =>
+  withBase(isEnglish.value ? '/en/disclaimer' : '/disclaimer')
+)
 const disclaimerText = computed(() => (isEnglish.value ? 'Disclaimer' : '免责声明'))
 
 const licenseUrl = 'https://creativecommons.org/licenses/by-sa/4.0/'

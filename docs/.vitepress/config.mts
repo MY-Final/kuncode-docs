@@ -81,7 +81,10 @@ const zhSidebar = [
   },
   {
     text: '关于',
-    items: [{ text: '关于本文档', link: '/about' }],
+    items: [
+      { text: '关于本文档', link: '/about' },
+      { text: '免责声明', link: '/disclaimer' },
+    ],
   },
 ]
 
@@ -158,7 +161,10 @@ const enSidebar = [
   },
   {
     text: 'About',
-    items: [{ text: 'About These Docs', link: '/en/about' }],
+    items: [
+      { text: 'About These Docs', link: '/en/about' },
+      { text: 'Disclaimer', link: '/en/disclaimer' },
+    ],
   },
 ]
 

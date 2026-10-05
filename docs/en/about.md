@@ -28,7 +28,7 @@ KunCode is only an **optional example**. It is not required and it is not the on
 - Providing replaceable configuration examples and troubleshooting steps
 - Helping you isolate key, address, model and network issues on the client side
 
-This site does not provide account signup, key issuance, top-ups, refunds or provider support. Those are handled by your service provider's console and documentation.
+This site does not provide account signup, key issuance, top-ups, refunds or provider support. Those are handled by your service provider's console and documentation. For the scope and limits of responsibility, see the [Disclaimer](/en/disclaimer).
 
 ## Open and shareable
 
