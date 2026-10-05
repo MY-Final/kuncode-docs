@@ -13,6 +13,7 @@ const zhNav = [
   { text: '工具接入', link: '/tools/' },
   { text: '常见问题', link: '/faq' },
   { text: '关于', link: '/about' },
+  { text: 'KunCode', link: 'https://kuncode.120403.xyz' },
 ]
 
 const zhSidebar = [
@@ -61,6 +62,7 @@ const enNav = [
   { text: 'Tools', link: '/en/tools/' },
   { text: 'FAQ', link: '/en/faq' },
   { text: 'About', link: '/en/about' },
+  { text: 'KunCode', link: 'https://kuncode.120403.xyz' },
 ]
 
 const enSidebar = [
@@ -152,7 +154,7 @@ export default defineConfig({
     nav: zhNav,
     sidebar: zhSidebar,
     outline: { level: [2, 3], label: '本页目录' },
-    socialLinks: [{ icon: 'github', link: 'https://github.com/' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/MY-Final/kuncode-docs' }],
     search: {
       provider: 'local',
       options: {
