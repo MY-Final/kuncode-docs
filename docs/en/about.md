@@ -2,7 +2,7 @@
 
 ## A general-purpose guide
 
-This site documents how AI coding tools - Codex, Claude Code, OpenCode and others - connect to model APIs.
+This site documents how AI coding tools - Codex, Claude Code, OpenCode, GitHub Copilot CLI and others - connect to model APIs.
 
 It is open to everyone:
 

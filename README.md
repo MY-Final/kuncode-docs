@@ -1,6 +1,6 @@
 # kuncode-docs
 
-Provider-agnostic setup guides for AI coding tools (Codex, Claude Code, OpenCode and others).
+Provider-agnostic setup guides for AI coding tools (Codex, Claude Code, OpenCode, GitHub Copilot CLI and others).
 
 The docs are open to everyone: examples use KunCode as a reference address, but every step applies to any compatible gateway or official API. Using KunCode is not required.
 
@@ -46,6 +46,7 @@ docs/
     codex.md
     claude-code.md
     opencode.md
+    copilot.md
   faq.md
   en/                   # English mirror of the same tree
   public/               # static assets (images, logo, favicon)

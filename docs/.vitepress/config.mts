@@ -38,6 +38,7 @@ const zhSidebar = [
         items: [
           { text: 'Codex', link: '/tools/codex' },
           { text: 'OpenCode', link: '/tools/opencode' },
+          { text: 'GitHub Copilot CLI', link: '/tools/copilot' },
         ],
       },
       {
@@ -87,6 +88,7 @@ const enSidebar = [
         items: [
           { text: 'Codex', link: '/en/tools/codex' },
           { text: 'OpenCode', link: '/en/tools/opencode' },
+          { text: 'GitHub Copilot CLI', link: '/en/tools/copilot' },
         ],
       },
       {
@@ -145,6 +147,7 @@ export default defineConfig({
           codex: 'simple-icons:openai',
           claude: 'simple-icons:anthropic',
           opencode: 'simple-icons:opencode',
+          copilot: 'simple-icons:githubcopilot',
         },
       }),
     ],

@@ -79,6 +79,7 @@ Not every model works in a coding assistant.
 - **Codex** needs the Responses API and reasoning
 - **Claude Code** needs tool call support
 - **OpenCode**'s `variants` only work when the model supports reasoning
+- **GitHub Copilot CLI** needs tool call and streaming support; the GPT-5 series works best over Responses
 
 Configure a model without tool call support in Claude Code and tool calls fail outright.
 :::
@@ -108,18 +109,20 @@ Trust what actually works: get one known-good model running first, then try othe
 | **Codex** | Responses + reasoning | `/v1/responses` | Set `model` in `config.toml` |
 | **Claude Code** | tool call | `/v1/messages` | Map the `sonnet` / `opus` / `haiku` aliases to real models |
 | **OpenCode** | At least chat; `variants` need reasoning | `/v1/responses` | Declared under `models` in `opencode.json` |
+| **GitHub Copilot CLI** | tool call + streaming | `/v1/chat/completions` or `/v1/responses` | Set the model with `COPILOT_MODEL`; pick the wire API as needed |
 
 Without tool call support, a coding assistant cannot read or write files and fails with a tool-related error.
 
 ## The model name must be exact
 
-All three tools require the name to **match the `id` returned by `/v1/models` exactly**:
+All these tools require the name to **match the `id` returned by `/v1/models` exactly**:
 
 | Tool | Where |
 | --- | --- |
 | Codex | `model` in `config.toml` |
 | Claude Code | `ANTHROPIC_DEFAULT_*_MODEL` in `settings.json` |
 | OpenCode | The `models` key in `opencode.json` |
+| GitHub Copilot CLI | The `COPILOT_MODEL` environment variable |
 
 If the API returns `deepseek-flash`, write `deepseek-flash`, not `DeepSeek-Flash` or `deepseek_flash`.
 

@@ -1,6 +1,6 @@
 # Prepare an API Key
 
-Whatever tool you use - Codex, Claude Code or OpenCode - the first step is the same: **create an API key and note your service address**.
+Whatever tool you use - Codex, Claude Code, OpenCode or GitHub Copilot CLI - the first step is the same: **create an API key and note your service address**.
 
 You only do this once. The per-tool guides all link back here.
 
@@ -23,7 +23,7 @@ The form has several fields, but most can stay at their defaults. These are the 
 | **Unlimited quota** | Whether to cap this key spend | On follows your balance; off lets you set a cap |
 
 ::: tip Create one key per tool
-Give Codex and Claude Code separate keys. Billing, debugging and revocation all get easier.
+Give Codex, Claude Code, OpenCode and GitHub Copilot CLI separate keys. Billing, debugging and revocation all get easier.
 Sharing one key is possible, but you cannot tell who used it.
 :::
 
@@ -81,6 +81,7 @@ Once the key and address are ready, continue with your tool:
 - [Codex setup](/en/tools/codex)
 - [Claude Code setup](/en/tools/claude-code)
 - [OpenCode setup](/en/tools/opencode)
+- [GitHub Copilot CLI setup](/en/tools/copilot)
 
 ## Optional: narrow the permissions
 

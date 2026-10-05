@@ -79,6 +79,7 @@ Anthropic Messages 入口返回的格式不同：
 - **Codex** 需要支持 Responses 接口和 reasoning
 - **Claude Code** 需要支持 tool call（工具调用）
 - **OpenCode** 的 `variants` 只在模型支持 reasoning 时生效
+- **GitHub Copilot CLI** 需要支持 tool call 和 streaming；GPT-5 系列建议使用 Responses 接口
 
 把不支持 tool call 的模型配进 Claude Code，工具调用会直接失败。
 :::
@@ -108,18 +109,20 @@ Anthropic Messages 入口返回的格式不同：
 | **Codex** | Responses + reasoning | `/v1/responses` | 需要在 `config.toml` 里填 `model` |
 | **Claude Code** | tool call | `/v1/messages` | 需要把 `sonnet` / `opus` / `haiku` 别名映射到真实模型 |
 | **OpenCode** | 至少能对话；`variants` 需要 reasoning | `/v1/responses` | 在 `opencode.json` 的 `models` 里声明 |
+| **GitHub Copilot CLI** | tool call + streaming | `/v1/chat/completions` 或 `/v1/responses` | 用 `COPILOT_MODEL` 指定模型，按需设置 wire API |
 
 如果模型不支持工具调用，编码助手无法完成读写文件等操作，会报工具调用相关的错误。
 
 ## 模型名必须完全一致
 
-模型名在三个工具里都有专门的位置，且都要求**和 `/v1/models` 返回的 `id` 完全一致**：
+模型名在这些工具里都有专门的位置，且都要求**和 `/v1/models` 返回的 `id` 完全一致**：
 
 | 工具 | 配置位置 |
 | --- | --- |
 | Codex | `config.toml` 里的 `model` |
 | Claude Code | `settings.json` 里的 `ANTHROPIC_DEFAULT_*_MODEL` |
 | OpenCode | `opencode.json` 里的 `models` 键名 |
+| GitHub Copilot CLI | 环境变量 `COPILOT_MODEL` |
 
 例如接口返回 `deepseek-flash`，就必须写 `deepseek-flash`，不能写 `DeepSeek-Flash` 或 `deepseek_flash`。
 

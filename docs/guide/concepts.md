@@ -2,7 +2,7 @@
 
 这一页解释你会在控制台里反复见到的几个概念：**API Key、分组、渠道、模型、倍率、额度**。
 
-理解它们之后，无论用 Codex、Claude Code 还是 OpenCode，配置时都知道每一项在填什么。
+理解它们之后，无论用 Codex、Claude Code、OpenCode 还是 GitHub Copilot CLI，配置时都知道每一项在填什么。
 
 ## 一次请求经过哪些环节
 
@@ -49,7 +49,7 @@ Authorization: Bearer sk-xxxxxxxx
 
 ### 为什么要按工具分别建 Key
 
-给 Codex、Claude Code、OpenCode 各建一个独立 Key，好处是：
+给 Codex、Claude Code、OpenCode、GitHub Copilot CLI 各建一个独立 Key，好处是：
 
 - **对账**：能看出是哪个工具花的钱
 - **排障**：某个工具出问题，不影响其他工具

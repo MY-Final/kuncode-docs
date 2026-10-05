@@ -2,7 +2,7 @@
 
 This page explains the terms you keep meeting in the console: **API key, group, channel, model, ratio and quota**.
 
-Once these are clear, you know what every field means when configuring Codex, Claude Code or OpenCode.
+Once these are clear, you know what every field means when configuring Codex, Claude Code, OpenCode or GitHub Copilot CLI.
 
 ## What happens on one request
 
@@ -49,7 +49,7 @@ If you lose it, delete the token and create a new one. Anyone holding the key ca
 
 ### Why one key per tool
 
-Give Codex, Claude Code and OpenCode separate keys:
+Give Codex, Claude Code, OpenCode and GitHub Copilot CLI separate keys:
 
 - **Accounting** - you can see which tool spent what
 - **Debugging** - one tool breaking does not affect the others

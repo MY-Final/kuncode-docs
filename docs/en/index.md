@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: KunCode API Docs
-  text: Connect Codex, Claude Code and OpenCode to any compatible gateway
+  text: Connect Codex, Claude Code, OpenCode and Copilot CLI to any compatible gateway
   tagline: General reference - swappable examples - no vendor lock-in
   actions:
     - theme: brand
@@ -23,7 +23,7 @@ features:
 ---
 
 ::: info This is a general-purpose guide
-It is written for everyone using Codex, Claude Code, OpenCode and similar tools.
+It is written for everyone using Codex, Claude Code, OpenCode, GitHub Copilot CLI and similar tools.
 **You do not need to use KunCode.** Replace the example addresses with any compatible gateway or official API.
 
 KunCode appears in examples only to illustrate the configuration format.

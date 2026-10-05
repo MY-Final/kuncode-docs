@@ -1,6 +1,6 @@
 # Overview
 
-This guide helps you connect AI coding tools (Codex, Claude Code, OpenCode, and others) to any compatible gateway.
+This guide helps you connect AI coding tools (Codex, Claude Code, OpenCode, GitHub Copilot CLI and others) to any compatible gateway.
 
 Self-hosted services, third-party gateways and official APIs all follow the same pattern: **point the tool at your service and provide a key**.
 
@@ -17,7 +17,7 @@ Self-hosted services, third-party gateways and official APIs all follow the same
 | API key | A key from your provider, shaped like `sk-xxxx` |
 | Base URL | Your service address, self-hosted or official |
 | Model name | The model you want, e.g. `gpt-5`, `claude-sonnet-4` |
-| The tool | Codex / Claude Code / OpenCode already installed |
+| The tool | Codex / Claude Code / OpenCode / GitHub Copilot CLI already installed |
 
 ::: tip About example addresses
 `https://your-gateway.example.com` is a generic placeholder. Replace it with your own service address.

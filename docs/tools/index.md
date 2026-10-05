@@ -5,6 +5,7 @@
 | [Codex](./codex) | Responses | `~/.codex/config.toml` | OpenAI 官方 CLI，支持自定义 provider |
 | [Claude Code](./claude-code) | Anthropic Messages | `~/.claude/settings.json` | Anthropic 官方 CLI |
 | [OpenCode](./opencode) | Responses | `opencode.json` | 开源终端编程助手 |
+| [GitHub Copilot CLI](./copilot) | Chat Completions / Responses | 环境变量 | GitHub 官方终端编程助手，支持 BYOK |
 
 ## 通用步骤
 

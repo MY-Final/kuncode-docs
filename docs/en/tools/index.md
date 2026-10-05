@@ -5,6 +5,7 @@
 | [Codex](./codex) | Responses | `~/.codex/config.toml` | OpenAI CLI with custom providers |
 | [Claude Code](./claude-code) | Anthropic Messages | `~/.claude/settings.json` | Anthropic CLI |
 | [OpenCode](./opencode) | Responses | `opencode.json` | Open-source terminal assistant |
+| [GitHub Copilot CLI](./copilot) | Chat Completions / Responses | Environment variables | GitHub terminal assistant with BYOK |
 
 ## Common steps
 

@@ -124,6 +124,7 @@ Base URL rules per tool:
 | Codex | `https://your-gateway.example.com/v1` |
 | Claude Code | `https://your-gateway.example.com` |
 | OpenCode | `https://your-gateway.example.com/v1` |
+| GitHub Copilot CLI | `https://your-gateway.example.com/v1` |
 
 See [Choose an endpoint](./endpoints).
 
@@ -208,6 +209,7 @@ Shrink the request (shorter context, smaller output) or retry later. For long re
 | Codex | [Codex troubleshooting](/en/tools/codex#_7-troubleshooting) |
 | Claude Code | [Claude Code troubleshooting](/en/tools/claude-code#_7-troubleshooting) |
 | OpenCode | [OpenCode troubleshooting](/en/tools/opencode#_8-troubleshooting) |
+| GitHub Copilot CLI | [GitHub Copilot CLI troubleshooting](/en/tools/copilot#_6-troubleshooting) |
 
 ## Checklist
 

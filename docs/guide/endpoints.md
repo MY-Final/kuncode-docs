@@ -7,14 +7,15 @@
 | 入口 | 路径 | 典型使用方 |
 | --- | --- | --- |
 | OpenAI Chat Completions | `/v1/chat/completions` | 大多数 OpenAI 兼容工具 |
-| OpenAI Responses | `/v1/responses` | Codex、OpenCode、新版 OpenAI SDK |
-| Anthropic Messages | `/v1/messages` | Claude Code、Anthropic SDK |
+| OpenAI Responses | `/v1/responses` | Codex、OpenCode、GitHub Copilot CLI、新版 OpenAI SDK |
+| Anthropic Messages | `/v1/messages` | Claude Code、GitHub Copilot CLI、Anthropic SDK |
 
 ## 怎么选
 
 - **Codex**：优先使用 Responses 入口，Base URL 填到根路径。
 - **Claude Code**：使用 Anthropic Messages 入口，在 `settings.json` 里覆盖官方地址。
 - **OpenCode**：使用 Responses 入口，在配置文件里声明 provider。
+- **GitHub Copilot CLI**：默认使用 Chat Completions 入口；模型更适合 Responses 时，把 `COPILOT_PROVIDER_WIRE_API` 设为 `responses`。
 
 ## 统一说明
 

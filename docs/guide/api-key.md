@@ -1,6 +1,6 @@
 # 准备 API Key
 
-无论你用 Codex、Claude Code 还是 OpenCode，第一步都一样：**先创建一个 API Key，并记下服务地址**。
+无论你用 Codex、Claude Code、OpenCode 还是 GitHub Copilot CLI，第一步都一样：**先创建一个 API Key，并记下服务地址**。
 
 这一步只做一次。后面的工具教程都会直接引用这里。
 
@@ -23,7 +23,7 @@
 | **无限配额** | 是否限制这个令牌的花费 | 打开则跟随账户余额；关闭可设置上限 |
 
 ::: tip 建议按工具分别创建令牌
-给 Codex、Claude Code 各建一个独立令牌，将来对账、排查、吊销都方便。
+给 Codex、Claude Code、OpenCode、GitHub Copilot CLI 各建一个独立令牌，将来对账、排查、吊销都方便。
 一个令牌多个工具共用虽然可以，但出问题时分不清是谁在用。
 :::
 
@@ -81,6 +81,7 @@ Key 和服务地址都准备好后，按你要用的工具继续：
 - [Codex 配置教程](/tools/codex)
 - [Claude Code 配置教程](/tools/claude-code)
 - [OpenCode 配置教程](/tools/opencode)
+- [GitHub Copilot CLI 配置教程](/tools/copilot)
 
 ## 进阶：权限收窄
 

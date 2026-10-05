@@ -124,6 +124,7 @@ Claude Code 的 `ANTHROPIC_AUTH_TOKEN` 走 `Authorization: Bearer`，`ANTHROPIC_
 | Codex | `https://your-gateway.example.com/v1` |
 | Claude Code | `https://your-gateway.example.com` |
 | OpenCode | `https://your-gateway.example.com/v1` |
+| GitHub Copilot CLI | `https://your-gateway.example.com/v1` |
 
 详见[选择接入方式](./endpoints)。
 
@@ -208,6 +209,7 @@ Claude Code 的 `ANTHROPIC_AUTH_TOKEN` 走 `Authorization: Bearer`，`ANTHROPIC_
 | Codex | [Codex 排障](/tools/codex#_7-排障) |
 | Claude Code | [Claude Code 排障](/tools/claude-code#_7-排障) |
 | OpenCode | [OpenCode 排障](/tools/opencode#_8-排障) |
+| GitHub Copilot CLI | [GitHub Copilot CLI 排障](/tools/copilot#_6-排障) |
 
 ## 排障检查清单
 

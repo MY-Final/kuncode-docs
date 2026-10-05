@@ -2,7 +2,7 @@
 
 ## 这是一份通用文档
 
-这里整理的是 AI 编程工具接入模型的通用方法，包括 Codex、Claude Code、OpenCode 等。
+这里整理的是 AI 编程工具接入模型的通用方法，包括 Codex、Claude Code、OpenCode、GitHub Copilot CLI 等。
 
 它面向所有人开放：
 

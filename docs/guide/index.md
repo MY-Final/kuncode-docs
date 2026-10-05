@@ -1,6 +1,6 @@
 # 概览
 
-这份文档帮助你把 AI 编程工具（Codex、Claude Code、OpenCode 等）接入任意兼容网关。
+这份文档帮助你把 AI 编程工具（Codex、Claude Code、OpenCode、GitHub Copilot CLI 等）接入任意兼容网关。
 
 无论你使用自建服务、第三方网关，还是官方 API，配置思路都是一样的：**把工具的请求地址和密钥指向你的服务**。
 
@@ -19,7 +19,7 @@
 | API Key | 服务商提供的密钥，形如 `sk-xxxx` |
 | Base URL | 你的服务地址，自建/第三方/官方均可 |
 | 模型名 | 要调用的模型，例如 `gpt-5`、`claude-sonnet-4` |
-| 工具本体 | 已安装好的 Codex / Claude Code / OpenCode |
+| 工具本体 | 已安装好的 Codex / Claude Code / OpenCode / GitHub Copilot CLI |
 
 ::: tip 关于示例地址
 文中的 `https://your-gateway.example.com` 是通用占位地址，请替换成你自己的服务地址。
