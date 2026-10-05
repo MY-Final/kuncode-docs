@@ -10,7 +10,7 @@
 
 1. Install the tool
 2. Prepare an API key
-3. Fill in Base URL and key
+3. Fill in Base URL and key (see [Models and capabilities](/en/guide/models) for choosing a model)
 4. Run the verification command
 5. Check the troubleshooting section if something fails
 

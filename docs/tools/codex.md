@@ -146,6 +146,8 @@ model_reasoning_effort = "xhigh"
 
 ## 7. 排障
 
+按状态码系统排查见[错误码与排障](/guide/errors)。
+
 | 现象 | 可能原因 | 处理 |
 | --- | --- | --- |
 | `401 Unauthorized` | Key 错误或未生效 | 确认 `experimental_bearer_token` 填的是完整密钥 |

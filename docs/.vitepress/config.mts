@@ -23,6 +23,7 @@ const zhSidebar = [
       { text: '准备 API Key', link: '/guide/api-key' },
       { text: '选择接入方式', link: '/guide/endpoints' },
       { text: '概念说明', link: '/guide/concepts' },
+      { text: '模型与能力', link: '/guide/models' },
     ],
   },
   {
@@ -49,6 +50,7 @@ const zhSidebar = [
     text: '排障',
     items: [
       { text: '常见问题', link: '/faq' },
+      { text: '错误码与排障', link: '/guide/errors' },
       { text: '关于本文档', link: '/about' },
     ],
   },
@@ -69,6 +71,7 @@ const enSidebar = [
       { text: 'Prepare an API Key', link: '/en/guide/api-key' },
       { text: 'Choose an Endpoint', link: '/en/guide/endpoints' },
       { text: 'Concepts', link: '/en/guide/concepts' },
+      { text: 'Models & Capabilities', link: '/en/guide/models' },
     ],
   },
   {
@@ -95,6 +98,7 @@ const enSidebar = [
     text: 'Troubleshooting',
     items: [
       { text: 'FAQ', link: '/en/faq' },
+      { text: 'Errors & Troubleshooting', link: '/en/guide/errors' },
       { text: 'About', link: '/en/about' },
     ],
   },

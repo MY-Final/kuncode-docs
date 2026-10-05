@@ -31,4 +31,5 @@
 - [准备 API Key](./api-key)
 - [选择接入方式](./endpoints)
 - [概念说明](./concepts)
+- [模型与能力](./models)
 - [工具列表](/tools/)

@@ -64,7 +64,7 @@ curl https://kuncode.120403.xyz/v1/models \
   -H "Authorization: Bearer sk-xxxxxxxx"
 ```
 
-把地址和密钥替换成你自己的。返回模型列表就说明 Key 没问题。
+把地址和密钥替换成你自己的。返回模型列表就说明 Key 没问题。怎么挑模型见[模型与能力](./models)。
 
 | 返回 | 含义 | 下一步 |
 | --- | --- | --- |

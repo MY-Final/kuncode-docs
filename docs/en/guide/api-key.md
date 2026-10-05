@@ -64,7 +64,7 @@ curl https://kuncode.120403.xyz/v1/models \
   -H "Authorization: Bearer sk-xxxxxxxx"
 ```
 
-Replace the address and key with your own. A model list means the key is fine.
+Replace the address and key with your own. A model list means the key is fine. See [Models and capabilities](./models) for choosing a model.
 
 | Response | Meaning | Next step |
 | --- | --- | --- |

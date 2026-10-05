@@ -198,6 +198,8 @@ Claude Code 支持用 effort 控制思考强度，可选 `low`、`medium`、`hig
 
 ## 7. 排障
 
+按状态码系统排查见[错误码与排障](/guide/errors)。
+
 | 现象 | 可能原因 | 处理 |
 | --- | --- | --- |
 | `401 Unauthorized` | Key 没生效或认证变量用错 | 用 `/status` 确认；`ANTHROPIC_AUTH_TOKEN` 和 `ANTHROPIC_API_KEY` 互换再试 |

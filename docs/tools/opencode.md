@@ -224,6 +224,8 @@ opencode run "print hello"
 
 ## 8. 排障
 
+按状态码系统排查见[错误码与排障](/guide/errors)。
+
 | 现象 | 可能原因 | 处理 |
 | --- | --- | --- |
 | `/models` 里看不到 provider | 配置文件路径或 JSON 语法错误 | 确认文件名是 `opencode.json`，并用 JSON 校验工具检查 |

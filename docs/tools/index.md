@@ -12,7 +12,7 @@
 
 1. 安装工具本体
 2. 准备 API Key
-3. 填入 Base URL 与 Key
+3. 填入 Base URL 与 Key（模型怎么挑见[模型与能力](/guide/models)）
 4. 运行验证命令
 5. 遇到问题查对应页面的排障小节
 

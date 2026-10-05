@@ -105,7 +105,7 @@ Authorization: Bearer sk-xxxxxxxx
 
 ### 高级设置：模型限制
 
-只允许这个 Key 调用指定的模型。不选表示允许全部模型。
+只允许这个 Key 调用指定的模型。不选表示允许全部模型。可选模型见[模型与能力](./models)。
 
 适合把不同工具、不同用途的 Key 隔离开，例如只让某个 Key 调 `deepseek-flash`。
 

@@ -198,6 +198,8 @@ Use your model's real window.
 
 ## 7. Troubleshooting
 
+For a systematic walkthrough by status code, see [Errors and troubleshooting](/en/guide/errors).
+
 | Symptom | Cause | Fix |
 | --- | --- | --- |
 | `401 Unauthorized` | Key not applied, or wrong credential variable | Check `/status`; try `ANTHROPIC_AUTH_TOKEN` and `ANTHROPIC_API_KEY` the other way round |

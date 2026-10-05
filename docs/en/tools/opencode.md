@@ -224,6 +224,8 @@ Long requests can time out; widen it for this provider only:
 
 ## 8. Troubleshooting
 
+For a systematic walkthrough by status code, see [Errors and troubleshooting](/en/guide/errors).
+
 | Symptom | Cause | Fix |
 | --- | --- | --- |
 | Provider missing from `/models` | Wrong config path or invalid JSON | Check the file is `opencode.json` and validate the JSON |

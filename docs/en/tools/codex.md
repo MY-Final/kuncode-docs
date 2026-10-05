@@ -146,6 +146,8 @@ Only reasoning models honour this field. Others ignore it.
 
 ## 7. Troubleshooting
 
+For a systematic walkthrough by status code, see [Errors and troubleshooting](/en/guide/errors).
+
 | Symptom | Cause | Fix |
 | --- | --- | --- |
 | `401 Unauthorized` | Key missing or wrong | Check `experimental_bearer_token` holds the full key |

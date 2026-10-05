@@ -103,7 +103,7 @@ The unit depends on your deployment: it may be money or tokens.
 
 ### Advanced: model limits
 
-Allow this key to call only the selected models. Empty means all models.
+Allow this key to call only the selected models. Empty means all models. See [Models and capabilities](./models) for the list.
 
 Useful to isolate tools, e.g. a key limited to `deepseek-flash`.
 
@@ -257,7 +257,7 @@ Wrong base URL, or an extra path. See [Choose an endpoint](./endpoints).
 
 ### Unknown model
 
-The model is not in the current group's available list. Query `/v1/models` for the real names, then check whether the group serves that model.
+The model is not in the current group's available list. Query `/v1/models` for the real names, then check whether the group serves that model. See [Models and capabilities](./models).
 
 ### Balance left, but the request is rejected
 
