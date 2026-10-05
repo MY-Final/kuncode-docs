@@ -12,6 +12,7 @@
 | 用 JetBrains | [Kilo Code](./kilo-code) 或 [Junie](https://www.jetbrains.com/junie/) | JetBrains 插件形态，官方支持 |
 | 想要桌面端应用 | [Goose](./goose) 或 [Cline](./cline) | 有独立桌面客户端，不依赖终端 |
 | 想要最简配置 | [Crush](./crush) | 一条 `crush provider add` 命令即可接入 |
+| 想要极简、可用扩展定制的终端工具 | [Pi](./piagent) | 核心精简，用 TypeScript 扩展、技能和主题按需扩展 |
 | 用 OpenAI 官方账号 | [Codex](./codex) | OpenAI 官方 CLI |
 | 用 Anthropic 官方账号 | [Claude Code](./claude-code) | Anthropic 官方 CLI |
 | 用 GitHub 账号 | [GitHub Copilot CLI](./copilot) 或 [VS Code + Copilot BYOK](./vscode-copilot) | GitHub 官方生态 |
@@ -35,6 +36,7 @@
 | [VS Code + Copilot BYOK](./vscode-copilot) | VS Code | Chat Completions / Responses / Messages | VS Code 模型管理 | VS Code / 系统凭据 | VS Code |
 | [Trae](./trae) | IDE | OpenAI Chat Completions / Anthropic Messages | 客户端模型设置 | 客户端凭据存储 | Windows 客户端 |
 | [CodeBuddy](./codebuddy) | IDE / 插件 | OpenAI Chat Completions | `models.json` | `models.json` 或客户端凭据 | Windows 客户端 |
+| [Pi](./piagent) | 终端 | Chat Completions / Responses / Anthropic Messages | `~/.pi/agent/models.json` | `models.json`、`auth.json` 或环境变量 | npm |
 
 > 表中的路径和安装方式可能随版本变化，以对应工具页和官方文档为准。完整的能力、协议和平台对比见[工具能力对比](./compare)。
 

@@ -72,6 +72,7 @@ const zhSidebar = [
       { text: 'VS Code + Copilot BYOK', link: '/tools/vscode-copilot' },
       { text: 'Trae', link: '/tools/trae' },
       { text: 'CodeBuddy', link: '/tools/codebuddy' },
+      { text: 'Pi', link: '/tools/piagent' },
     ],
   },
   {
@@ -152,6 +153,7 @@ const enSidebar = [
       { text: 'VS Code + Copilot BYOK', link: '/en/tools/vscode-copilot' },
       { text: 'Trae', link: '/en/tools/trae' },
       { text: 'CodeBuddy', link: '/en/tools/codebuddy' },
+      { text: 'Pi', link: '/en/tools/piagent' },
     ],
   },
   {

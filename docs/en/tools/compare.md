@@ -19,6 +19,7 @@ Use this page to narrow down tools by requirement. For detailed setup, open the 
 | [VS Code + Copilot BYOK](/en/tools/vscode-copilot) | VS Code | Chat Completions / Responses / Messages | Required for coding (model-dependent) | Client supports it (model/provider-dependent) | Model/provider-dependent | Yes | VS Code is free; model usage is billed by the provider | Medium | VS Code users who need a Custom endpoint |
 | [Trae](/en/tools/trae) | IDE | OpenAI Chat Completions / Anthropic Messages | Required for coding (model-dependent) | Client supports it (model/provider-dependent) | Model/provider-dependent | Windows 10/11 supported | The client has a free tier; quotas are subject to official terms. Custom model usage is billed by the provider | Low | Users in China who prefer a Chinese IDE |
 | [CodeBuddy](/en/tools/codebuddy) | IDE / extension | OpenAI Chat Completions | Required for coding (model-dependent) | Client supports it (model/provider-dependent) | Model/provider-dependent | Windows 10+ supported | Free and enterprise plans exist; check the official site for details | Medium | Users in China who configure models with `models.json` |
+| [Pi](/en/tools/piagent) | Terminal | Chat Completions / Responses / Anthropic Messages | Required for coding (model-dependent) | Client supports it (model/provider-dependent) | Model/provider-dependent | Yes, bash required (Git Bash is enough) | Open source; can use free or low-cost models | Medium | Users who want a minimal, extensible terminal tool |
 
 > Tool calls, streaming, and image input depend on the **client, protocol entry point, model and provider** together. No tool can guarantee them on its own. For a coding tool to read and write files or run commands, the model must support tool calls; otherwise it can only chat. Check the official tool, model and provider documentation before relying on these features.
 
@@ -33,6 +34,7 @@ Use this page to narrow down tools by requirement. For detailed setup, open the 
 | JetBrains | [Kilo Code](/en/tools/kilo-code) | The tool page explicitly supports the JetBrains extension |
 | Desktop app | [Goose](/en/tools/goose) or [Cline](/en/tools/cline) | The tool page explicitly lists a desktop form factor |
 | Simplest setup | [Crush](/en/tools/crush) | One `crush provider add` command is enough to get started |
+| Minimal but extensible terminal tool | [Pi](/en/tools/piagent) | Lean core, customizable on demand with TypeScript extensions, skills and themes |
 | Official Gemini models only | [Gemini CLI](/en/tools/gemini-cli) | Uses the Gemini native protocol and supports Google account login and Gemini API keys |
 
 ## How to verify that a tool meets your needs

@@ -27,7 +27,7 @@ features:
     linkText: Get started
   - icon: 🧰
     title: Guides by tool
-    details: Setup steps, configuration fields and troubleshooting for 13 AI coding tools.
+    details: Setup steps, configuration fields and troubleshooting for 14 AI coding tools.
     link: /en/tools/
     linkText: Browse tools
   - icon: 🔌

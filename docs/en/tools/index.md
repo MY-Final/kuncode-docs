@@ -12,6 +12,7 @@ Match your situation:
 | You use JetBrains | [Kilo Code](./kilo-code) or [Junie](https://www.jetbrains.com/junie/) | JetBrains plugin, officially supported |
 | You want a desktop app | [Goose](./goose) or [Cline](./cline) | Standalone desktop client, no terminal needed |
 | You want the simplest setup | [Crush](./crush) | One `crush provider add` command |
+| You want a minimal terminal tool you can extend | [Pi](./piagent) | Lean core, extended on demand with TypeScript extensions, skills and themes |
 | You use an OpenAI account | [Codex](./codex) | OpenAI's official CLI |
 | You use an Anthropic account | [Claude Code](./claude-code) | Anthropic's official CLI |
 | You use a GitHub account | [GitHub Copilot CLI](./copilot) or [VS Code + Copilot BYOK](./vscode-copilot) | GitHub's official ecosystem |
@@ -35,6 +36,7 @@ Do not install several tools at once. Get one working first.
 | [VS Code + Copilot BYOK](./vscode-copilot) | VS Code | Chat Completions / Responses / Messages | VS Code model management | VS Code / system credentials | VS Code |
 | [Trae](./trae) | IDE | OpenAI Chat Completions / Anthropic Messages | Client model settings | Client credential store | Windows client |
 | [CodeBuddy](./codebuddy) | IDE / extension | OpenAI Chat Completions | `models.json` | `models.json` or client credentials | Windows client |
+| [Pi](./piagent) | Terminal | Chat Completions / Responses / Anthropic Messages | `~/.pi/agent/models.json` | `models.json`, `auth.json`, or environment variable | npm |
 
 > Paths and installation methods can change by version; check the tool page and official docs. For the full capability, protocol and platform comparison, see [Tool Comparison](./compare).
 
