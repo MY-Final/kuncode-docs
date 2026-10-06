@@ -33,7 +33,8 @@ If you use Windows, read [Windows essentials](./windows) first to understand the
 | I do not have an account or an API key | Choose a free or trial model, then follow the page to sign up and get a key | [Free and trial models](./free-models) |
 | I have an account, but no API key yet | Sign in to your provider's console and create and save an API key | [Create and save an API key](/en/guide/api-key) |
 | I have an API key, but no tool installed yet | Have the AI inspect your environment, install the tool, and write the configuration | [Let AI install and configure a tool](./first-run) |
-| The tool is installed, but it does not work or shows an error | Check common errors first; if that does not help, check the FAQ | [Common errors](/en/guide/errors) · [FAQ](/en/faq) |
+| I have a key and want to do it myself | Follow a fixed example from checking models all the way to verifying tool calls | [15-minute minimal setup](./quickstart) |
+| The tool is installed, but it does not work or shows an error | Work out who to ask and share a redacted error | [When setup fails](./help) |
 
 ::: tip Not sure which situation applies to you?
 Send the AI what you know (operating system, provider name, whether you already have a key, and the exact error). Ask it to identify your situation first, then take you to the right page.
@@ -66,4 +67,6 @@ We recommend continuing in this order:
 
 1. [Let AI install and configure a tool](./first-run)
 2. [Configuration prompt library](./prompts)
-3. Read [Free and trial models](./free-models) if you need free credit
+3. To do it yourself, see [15-minute minimal setup](./quickstart)
+4. When something breaks, see [When setup fails](./help)
+5. Read [Free and trial models](./free-models) if you need free credit
