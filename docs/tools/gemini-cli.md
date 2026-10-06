@@ -12,7 +12,7 @@ Gemini CLI 主要使用 Gemini 官方协议，不是通用的 OpenAI / Anthropic
 如果你的服务只提供 OpenAI Chat Completions、Responses 或 Anthropic Messages，请改用对应的工具页，不要把 Gemini CLI 当作任意兼容网关客户端。
 :::
 
-本文使用 `https://kuncode.120403.xyz` 作为示例地址，换成你自己的服务地址同样适用。配置前先向服务商确认它是否提供 Gemini API 兼容入口，以及对应的模型 ID 和认证方式。
+本文以 KunCode 为例演示，把示例中的地址、Key 和模型名替换成你自己的服务即可。占位符与替换规则见[通用占位符说明](/guide/index#占位符约定)。配置前先向服务商确认它是否提供 Gemini API 兼容入口，以及对应的模型 ID 和认证方式。
 
 官方资源：
 

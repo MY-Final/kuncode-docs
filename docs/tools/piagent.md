@@ -6,7 +6,7 @@
 
 极简终端编程助手（`@earendil-works/pi-coding-agent`），通过 `models.json` 接入任何兼容网关。
 
-本文以 KunCode 为例演示，换成你自己的服务地址同样适用。
+本文以 KunCode 为例演示，把示例中的地址、Key 和模型名替换成你自己的服务即可。占位符与替换规则见[通用占位符说明](/guide/index#占位符约定)。
 
 - 官网：<https://pi.dev>
 - GitHub：<https://github.com/earendil-works/pi-mono>

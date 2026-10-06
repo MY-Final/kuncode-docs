@@ -6,7 +6,7 @@
 
 开源本地 AI Agent，支持桌面端、CLI 和 API。它可以通过 OpenAI Compatible、Anthropic Compatible、Ollama 或自定义 provider 接入兼容网关。
 
-本文以 KunCode 为例，换成你自己的服务地址同样适用。
+本文以 KunCode 为例演示，把示例中的地址、Key 和模型名替换成你自己的服务即可。占位符与替换规则见[通用占位符说明](/guide/index#占位符约定)。
 
 ## 1. 安装
 

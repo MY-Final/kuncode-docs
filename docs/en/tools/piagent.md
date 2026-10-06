@@ -6,7 +6,7 @@ Last verified: 2026-10-06 · Pi 0.74.2
 
 A minimal terminal coding agent (`@earendil-works/pi-coding-agent`) that connects to any compatible gateway through `models.json`.
 
-This page uses KunCode as the example. Swap in your own service address and it works the same.
+This page uses KunCode as an example. Replace the addresses, keys and model names with your own service's values. See [placeholder conventions](/en/guide/#placeholder-conventions).
 
 - Website: <https://pi.dev>
 - GitHub: <https://github.com/earendil-works/pi-mono>

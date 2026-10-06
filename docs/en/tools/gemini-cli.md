@@ -12,7 +12,7 @@ Gemini CLI primarily uses Google's Gemini protocol. It is **not** a general Open
 If your service only provides OpenAI Chat Completions, Responses, or Anthropic Messages, use the corresponding tool page instead. Do not treat Gemini CLI as a client for any compatible gateway.
 :::
 
-This page uses `https://kuncode.120403.xyz` as an example address. Swap in your own service address. Before configuring it, confirm with your provider that it offers a Gemini API-compatible endpoint, and check the exact model IDs and authentication method it supports.
+This page uses KunCode as an example. Replace the addresses, keys and model names with your own service's values. See [placeholder conventions](/en/guide/#placeholder-conventions). Before configuring it, confirm with your provider that it offers a Gemini API-compatible endpoint, and check the exact model IDs and authentication method it supports.
 
 Official resources:
 

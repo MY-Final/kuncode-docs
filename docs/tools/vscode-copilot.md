@@ -2,11 +2,13 @@
 
 ::: info 适用版本
 最后验证：2026-10-06 · 当前稳定版 VS Code · 官方文档 https://code.visualstudio.com/docs/copilot/customization/language-models
+
+本文未固定具体版本号，配置步骤以官方文档和当前界面为准。
 :::
 
 在 VS Code 中使用 GitHub Copilot Chat，并通过 BYOK（Bring Your Own Key）或 **Custom endpoint** 接入自定义模型服务。VS Code 本身免费，模型费用由你选择的 provider 收取；部分 Copilot 功能仍需要 GitHub 账号或订阅，具体以官方文档为准。
 
-本文以 KunCode 为例，换成你自己的服务地址同样适用。配置界面可能随 VS Code 版本变化，实际字段和入口以 VS Code 当前版本及官方文档为准。
+本文以 KunCode 为例演示，把示例中的地址、Key 和模型名替换成你自己的服务即可。占位符与替换规则见[通用占位符说明](/guide/index#占位符约定)。配置界面可能随 VS Code 版本变化，实际字段和入口以 VS Code 当前版本及官方文档为准。
 
 - 官方文档：<https://code.visualstudio.com/docs/copilot/customization/language-models>
 - 组织版 BYOK 文档：<https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/use-your-own-api-keys>

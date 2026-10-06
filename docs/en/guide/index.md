@@ -11,6 +11,20 @@ It is a **provider-agnostic setup guide**: the portable configuration and troubl
 
 The core workflow is simple: **identify your service source, obtain a key and service address, then point the tool at that service.**
 
+## Placeholder conventions
+
+This site deliberately uses two kinds of example addresses: the beginner quickstart uses the generic placeholder `https://gateway.example.com`, while tool pages use the KunCode example `https://kuncode.120403.xyz`. Both are placeholders only; replace them with your own service address when you configure a tool.
+
+Keys are shown as `sk-your-key` or `sk-xxxxxxxx`, which are also placeholders. A real key's format is decided by the provider and may not start with `sk-`.
+
+Model names such as `deepseek-flash` and `gpt-5` are examples as well. Call `/v1/models` and replace them with a model ID actually returned by your service.
+
+| Placeholder | Replace it with |
+| --- | --- |
+| `https://gateway.example.com` or `https://kuncode.120403.xyz` | Your own service address |
+| `sk-your-key` or `sk-xxxxxxxx` | The API key issued by your provider |
+| `deepseek-flash` or `gpt-5` | A model ID actually returned by `/v1/models` |
+
 ## Identify your service source
 
 | Service source | What you need | Where to get it |

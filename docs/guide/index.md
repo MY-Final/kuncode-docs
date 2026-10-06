@@ -11,6 +11,20 @@
 
 核心思路只有一句：**先确定服务来源并取得 Key 和服务地址，再把工具指向该服务。**
 
+## 占位符约定
+
+本站刻意使用两类示例地址：新手快速上手页使用通用占位地址 `https://gateway.example.com`，工具页使用 KunCode 示例地址 `https://kuncode.120403.xyz`。两者都只是占位符，实际配置时请替换成你自己的服务地址。
+
+文档里的 Key 写成 `sk-your-key` 或 `sk-xxxxxxxx`，这也只是占位符。真实 Key 的格式由服务商决定，并不一定以 `sk-` 开头。
+
+`deepseek-flash`、`gpt-5` 等模型名同样是示例。请调用 `/v1/models`，用服务实际返回的模型 ID 替换它们。
+
+| 占位符 | 替换为 |
+| --- | --- |
+| `https://gateway.example.com` 或 `https://kuncode.120403.xyz` | 你自己的服务地址 |
+| `sk-your-key` 或 `sk-xxxxxxxx` | 服务商实际签发的 API Key |
+| `deepseek-flash` 或 `gpt-5` | `/v1/models` 实际返回的模型 ID |
+
 ## 先确认服务来源
 
 | 服务来源 | 你要准备什么 | 从哪里获取 |

@@ -6,7 +6,7 @@ Last verified: 2026-10-06 · Qwen Code 0.25.0
 
 An open-source terminal coding assistant that speaks OpenAI, Anthropic, Gemini and other protocols, and can reach any compatible gateway through a custom provider.
 
-This page uses KunCode as the example. Swap in your own service address and it works the same.
+This page uses KunCode as an example. Replace the addresses, keys and model names with your own service's values. See [placeholder conventions](/en/guide/#placeholder-conventions).
 
 ::: warning The Qwen OAuth free tier is gone
 The Qwen OAuth free tier was discontinued on **2026-04-15**, and it is no longer an option in `/auth`. Use an Alibaba Cloud ModelStudio Coding Plan, or an API key from a third-party compatible service instead.

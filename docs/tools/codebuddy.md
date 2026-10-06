@@ -2,11 +2,13 @@
 
 ::: info 适用版本
 最后验证：2026-10-06 · 当前稳定版客户端 · 官方文档 https://codebuddy.cn/docs/ide/Features/models
+
+本文未固定具体版本号，配置步骤以官方文档和当前界面为准。
 :::
 
 腾讯云推出的 AI 编程助手，支持通过用户级或项目级 `models.json` 接入自定义模型。
 
-本文以 KunCode 为例，换成你自己的服务地址同样适用。CodeBuddy 的界面和配置字段可能随版本变化，具体以当前客户端和官方文档为准。
+本文以 KunCode 为例演示，把示例中的地址、Key 和模型名替换成你自己的服务即可。占位符与替换规则见[通用占位符说明](/guide/index#占位符约定)。CodeBuddy 的界面和配置字段可能随版本变化，具体以当前客户端和官方文档为准。
 
 - 官网：<https://codebuddy.cn/>
 - 产品介绍：<https://codebuddy.cn/docs/ide/Introduction>

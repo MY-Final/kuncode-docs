@@ -6,7 +6,7 @@
 
 开源终端编程助手，支持 OpenAI、Anthropic、Gemini 等多种协议，可以通过自定义 provider 接入任何兼容网关。
 
-本文以 KunCode 为例演示，换成你自己的服务地址同样适用。
+本文以 KunCode 为例演示，把示例中的地址、Key 和模型名替换成你自己的服务即可。占位符与替换规则见[通用占位符说明](/guide/index#占位符约定)。
 
 ::: warning Qwen OAuth 免费层已停止
 Qwen OAuth 免费层已于 **2026-04-15** 停止，`/auth` 里不再提供该入口。现在请使用阿里云 ModelStudio Coding Plan，或第三方兼容服务的 API Key。

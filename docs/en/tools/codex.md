@@ -6,7 +6,7 @@ Last verified: 2026-10-06 · Codex CLI 0.160.0
 
 OpenAI's official CLI. With a custom provider you can point Codex at any compatible gateway.
 
-This page uses KunCode as the example. Swap in your own service address and it works the same.
+This page uses KunCode as an example. Replace the addresses, keys and model names with your own service's values. See [placeholder conventions](/en/guide/#placeholder-conventions).
 
 ## 1. Install
 
