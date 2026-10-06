@@ -1,7 +1,7 @@
 # Codex
 
 ::: info Tested with
-Last verified: 2026-10-07 · Codex CLI 0.160.0
+Last verified: 2026-10-06 · Codex CLI 0.160.0
 :::
 
 OpenAI's official CLI. With a custom provider you can point Codex at any compatible gateway.
@@ -205,7 +205,20 @@ The result is the same as the manual setup above, just without the typing.
 Codex++ is not an OpenAI product and is not a standalone AI coding client. It targets Codex Desktop by modifying or injecting into the desktop app, running local scripts and installing update watchers to extend the UI, accounts and provider configuration. Install only from a repository with auditable source; avoid builds with no source or an unknown publisher.
 :::
 
-The official OpenAI documentation does not document a supported injection API for Codex Desktop. For KunCode, prefer the Codex CLI `config.toml` setup above. Consider Codex++ only if you specifically need a translated desktop UI, account switching or graphical provider management.
+Codex++ project details checked: 2026-10-07. The official OpenAI documentation does not document a supported injection API for Codex Desktop. For KunCode, prefer the Codex CLI `config.toml` setup above. Consider Codex++ only if you specifically need a translated desktop UI, account switching or graphical provider management.
+
+### Back up before installing
+
+1. Quit Codex Desktop.
+2. Back up `~/.codex/config.toml` and `~/.codex/auth.json`; on Windows these are `%USERPROFILE%\.codex\config.toml` and `%USERPROFILE%\.codex\auth.json`.
+3. Record the current Codex Desktop version, provider and model settings.
+4. Keep the backup until the desktop app and the new provider both work.
+
+The `xianyu110/CodexPlusPlus` docs say its "clear API mode" switches back to the official login state; the original Codex++ documents `codexplusplus safe-mode`, `repair` and `uninstall`. Do not rely on those commands as your only backup. Back up the config and auth files yourself.
+
+### CLI success does not guarantee desktop success
+
+The `codex exec` check above verifies Codex CLI. Whether Codex Desktop reads the same `~/.codex/config.toml`, and whether Codex++ rewrites it, depends on the desktop version and the implementation. After setup, send a message from the desktop app and confirm that the request actually uses the intended provider.
 
 Projects to investigate:
 

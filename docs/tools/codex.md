@@ -1,7 +1,7 @@
 # Codex
 
 ::: info 适用版本
-最后验证：2026-10-07 · Codex CLI 0.160.0
+最后验证：2026-10-06 · Codex CLI 0.160.0
 :::
 
 OpenAI 官方 CLI。通过自定义 provider，可以把 Codex 指向任何兼容网关。
@@ -205,7 +205,20 @@ $env:KUNCODE_API_KEY = "sk-xxxxxxxx"
 Codex++ 不是 OpenAI 官方产品，也不是独立的 AI 编程客户端。它面向 Codex Desktop，通过修改或注入桌面应用、运行本地脚本、安装更新 watcher 等方式扩展界面、账号和 provider 配置。只从有可审计源码的仓库安装，不要使用来源不明或只提供预编译包的版本。
 :::
 
-OpenAI 官方文档目前没有说明支持这类 Codex Desktop 注入接口。接入 KunCode 仍优先使用上面的 Codex CLI `config.toml` 方式；只有明确需要桌面端中文界面、账号切换或图形化管理时，才考虑 Codex++。
+Codex++ 项目信息核对：2026-10-07。OpenAI 官方文档目前没有说明支持这类 Codex Desktop 注入接口。接入 KunCode 仍优先使用上面的 Codex CLI `config.toml` 方式；只有明确需要桌面端中文界面、账号切换或图形化管理时，才考虑 Codex++。
+
+### 使用前先备份
+
+1. 退出 Codex Desktop。
+2. 备份 `~/.codex/config.toml` 和 `~/.codex/auth.json`；Windows 对应 `%USERPROFILE%\.codex\config.toml` 和 `%USERPROFILE%\.codex\auth.json`。
+3. 记录当前 Codex Desktop 版本、provider 和模型配置。
+4. 保留备份，直到确认桌面端和新 provider 都能正常工作。
+
+`xianyu110/CodexPlusPlus` 文档称，其“清除 API 模式”可切回官方登录态；原版 Codex++ 文档提供 `codexplusplus safe-mode`、`repair` 和 `uninstall`。不要把这些命令当作唯一备份，先自行备份配置和登录文件。
+
+### CLI 成功不等于桌面端成功
+
+上面的 `codex exec` 验证的是 Codex CLI。Codex Desktop 是否读取同一份 `~/.codex/config.toml`、是否被 Codex++ 改写，取决于桌面端版本和具体实现。接入后要在桌面端再单独发一条消息，并确认实际请求走了目标 provider。
 
 目前可研究的项目：
 
