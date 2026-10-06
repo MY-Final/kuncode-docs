@@ -21,6 +21,7 @@ Match your situation:
 ::: tip Pick one
 Do not install several tools at once. Get one working first.
 :::
+
 | Tool | Form | Supported protocols | Main config | Credentials | Windows install |
 | --- | --- | --- | --- | --- | --- |
 | [Codex](./codex) | Terminal | Responses | `~/.codex/config.toml` | Config file or environment variable | npm |

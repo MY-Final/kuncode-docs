@@ -181,13 +181,13 @@ model add kuncode/deepseek-flash \
 
 ### Adjust the request timeout
 
-The default request timeout is 60 seconds. Raise it when starting Crush for long requests:
+The default request timeout is 60 seconds. Raise it for long requests:
 
 ```bash
-crush --timeout 300
+option request-timeout 300
 ```
 
-`--timeout` is in seconds. For streaming requests, it is measured as idle time between new chunks.
+`request-timeout` is in seconds. For streaming requests, it is measured as idle time between new chunks.
 
 ### View logs
 

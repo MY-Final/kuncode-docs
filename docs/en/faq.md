@@ -11,6 +11,11 @@ For a systematic walkthrough by status code, see [Errors and troubleshooting](/e
 3. Make sure the key is not expired, disabled, or out of quota.
 4. Verify with `curl` to rule out tool-specific issues.
 
+```bash
+curl https://your-gateway.example.com/v1/models \
+  -H "Authorization: Bearer sk-xxxxxxxx"
+```
+
 See [Errors and troubleshooting](/en/guide/errors).
 
 ## 403 Forbidden
