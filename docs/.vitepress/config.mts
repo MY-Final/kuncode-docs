@@ -34,6 +34,7 @@ const zhSidebar = [
     collapsed: false,
     items: [
       { text: '零基础上手', link: '/beginner/' },
+      { text: 'Windows 用户必读', link: '/beginner/windows' },
       { text: '免费与试用模型', link: '/beginner/free-models' },
       { text: '让 AI 安装并配置工具', link: '/beginner/first-run' },
       { text: '配置提示词库', link: '/beginner/prompts' },
@@ -94,7 +95,7 @@ const zhSidebar = [
 const enNav = [
   { text: 'Getting Started', link: '/en/guide/' },
   { text: 'Tools', link: '/en/tools/' },
-      { text: 'Tool Comparison', link: '/en/tools/compare' },
+  { text: 'Tool Comparison', link: '/en/tools/compare' },
   {
     text: 'Troubleshooting',
     items: [
@@ -116,6 +117,7 @@ const enSidebar = [
     collapsed: false,
     items: [
       { text: 'Getting Started from Zero', link: '/en/beginner/' },
+      { text: 'Windows: Read This First', link: '/en/beginner/windows' },
       { text: 'Free and Trial Models', link: '/en/beginner/free-models' },
       { text: 'Let AI Install and Configure', link: '/en/beginner/first-run' },
       { text: 'Configuration Prompt Library', link: '/en/beginner/prompts' },
@@ -298,7 +300,7 @@ export default defineConfig({
       link: '/en/',
       title: 'KunCode API Docs',
       description:
-        'A provider-agnostic setup reference for AI coding tools. No service required.',
+        'A provider-agnostic setup reference for AI coding tools. Works with any compatible service.',
       themeConfig: {
         nav: enNav,
         sidebar: enSidebar,
