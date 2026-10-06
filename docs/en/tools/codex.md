@@ -1,7 +1,7 @@
 # Codex
 
 ::: info Tested with
-Last verified: 2026-10-06 · Codex CLI 0.160.0
+Last verified: 2026-10-07 · Codex CLI 0.160.0
 :::
 
 OpenAI's official CLI. With a custom provider you can point Codex at any compatible gateway.
@@ -198,6 +198,25 @@ If you already use [CC Switch](/en/guide/cc-switch) to manage providers, skip th
 4. Click **Open CC Switch**; the config is written for you
 
 The result is the same as the manual setup above, just without the typing.
+
+## Advanced: Codex++ desktop enhancements (third party)
+
+::: warning Unofficial tool - audit the source first
+Codex++ is not an OpenAI product and is not a standalone AI coding client. It targets Codex Desktop by modifying or injecting into the desktop app, running local scripts and installing update watchers to extend the UI, accounts and provider configuration. Install only from a repository with auditable source; avoid builds with no source or an unknown publisher.
+:::
+
+The official OpenAI documentation does not document a supported injection API for Codex Desktop. For KunCode, prefer the Codex CLI `config.toml` setup above. Consider Codex++ only if you specifically need a translated desktop UI, account switching or graphical provider management.
+
+Projects to investigate:
+
+| Project | Platform / status | Notes |
+| --- | --- | --- |
+| [xianyu110/CodexPlusPlus](https://github.com/xianyu110/CodexPlusPlus) | Windows / macOS, active | Uses an external launcher and CDP injection; claims not to modify `app.asar`. Its relay-injection mode writes a custom provider into `~/.codex/config.toml`. |
+| [b-nnett/codex-plusplus](https://github.com/b-nnett/codex-plusplus) | Original project, archived | Early tweak system that patches `app.asar`; last code update was 2026-06-08. Not recommended for new installs. |
+
+::: danger Avoid untrusted release packages
+Do not use untrusted packages that advertise "skip official login" or "unlock the plugin marketplace." Those features may violate terms, expose account credentials or break Codex updates. Never commit an API key to Git, paste it into an issue, or hand it to an unaudited third-party script.
+:::
 
 ---
 

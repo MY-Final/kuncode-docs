@@ -1,7 +1,7 @@
 # Codex
 
 ::: info 适用版本
-最后验证：2026-10-06 · Codex CLI 0.160.0
+最后验证：2026-10-07 · Codex CLI 0.160.0
 :::
 
 OpenAI 官方 CLI。通过自定义 provider，可以把 Codex 指向任何兼容网关。
@@ -198,6 +198,25 @@ $env:KUNCODE_API_KEY = "sk-xxxxxxxx"
 4. 点击「打开 CC Switch」，配置会自动写入 `config.toml`
 
 导入后配置内容和上面手动写的一致，只是省去了手写步骤。
+
+## 进阶：Codex++ 桌面端增强（第三方）
+
+::: warning 非官方工具，先审计源码
+Codex++ 不是 OpenAI 官方产品，也不是独立的 AI 编程客户端。它面向 Codex Desktop，通过修改或注入桌面应用、运行本地脚本、安装更新 watcher 等方式扩展界面、账号和 provider 配置。只从有可审计源码的仓库安装，不要使用来源不明或只提供预编译包的版本。
+:::
+
+OpenAI 官方文档目前没有说明支持这类 Codex Desktop 注入接口。接入 KunCode 仍优先使用上面的 Codex CLI `config.toml` 方式；只有明确需要桌面端中文界面、账号切换或图形化管理时，才考虑 Codex++。
+
+目前可研究的项目：
+
+| 项目 | 平台 / 状态 | 说明 |
+| --- | --- | --- |
+| [xianyu110/CodexPlusPlus](https://github.com/xianyu110/CodexPlusPlus) | Windows / macOS，活跃 | 通过外部 launcher 和 CDP 注入增强桌面端，宣称不改 `app.asar`；提供“中转注入”，会把自定义 provider 写入 `~/.codex/config.toml` |
+| [b-nnett/codex-plusplus](https://github.com/b-nnett/codex-plusplus) | 原项目，已归档 | 早期 tweak 系统，会修改 `app.asar`；最后代码更新为 2026-06-08，不建议新装 |
+
+::: danger 不要使用不可信发行包
+不要使用宣称“跳过官方登录”“解锁插件市场”的不可信发行包。这类功能可能违反服务条款、暴露账号凭据或破坏 Codex 更新。不要把 API Key 提交到 Git、粘贴到 Issue，或交给未审计的第三方脚本。
+:::
 
 ---
 
