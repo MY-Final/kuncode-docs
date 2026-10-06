@@ -31,7 +31,7 @@ In one line: **the API key proves who you are, the group decides the route and t
 
 An API key (also called a token) is the credential you use to call the API.
 
-- Looks like `sk-xxxxxxxxxxxxxxxx`, always starting with `sk-`
+- Often looks like `sk-xxxxxxxx`, but the format is set by the provider and does not always start with `sk-`
 - Belongs to a user, and can carry its own quota, expiry and restrictions
 - The server stores only what it needs to verify; **the full key is usually shown once**
 
@@ -112,7 +112,7 @@ Useful to isolate tools, e.g. a key limited to `deepseek-flash`.
 Allow the key only from the listed IPs or CIDR ranges, one per line. Empty means no restriction.
 
 ::: warning Do not over-trust the IP allowlist
-Client IPs can be spoofed. Combine it with nginx, a CDN or another gateway; do not treat it as the only protection.
+An IP allowlist depends on the gateway seeing the real source IP. A proxy, CDN, or corporate egress point can change the source IP, and misconfigured `X-Forwarded-For` handling or a shared egress IP can also cause problems. Make sure the gateway receives the real client IP, and do not treat the allowlist as your only protection.
 :::
 
 ## What a group is
@@ -314,7 +314,7 @@ Check in this order: confirm the active credential → key quota → group permi
 
 | Concept | In one line |
 | --- | --- |
-| API key | Your credential, starting with `sk-` |
+| API key | Your credential; often looks like `sk-xxxxxxxx`, but does not always start with `sk-` |
 | Group | A set of channels plus ratio rules |
 | Channel | The real line to an upstream provider |
 | Model | The model that finally handles the request |

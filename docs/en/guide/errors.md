@@ -130,7 +130,7 @@ The address does not exist.
 | Item | Detail |
 | --- | --- |
 | Confirm | Check the base URL and path |
-| Fix | Use the domain only and let the tool append `/v1/...` |
+| Fix | Follow the table below for your tool: Codex, OpenCode, and GitHub Copilot CLI must include `/v1` in the Base URL; Claude Code should use the domain only. |
 
 Common causes:
 

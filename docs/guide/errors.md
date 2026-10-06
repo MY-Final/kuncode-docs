@@ -130,7 +130,7 @@ Claude Code 的 `ANTHROPIC_AUTH_TOKEN` 走 `Authorization: Bearer`，`ANTHROPIC_
 | 项目 | 说明 |
 | --- | --- |
 | 怎么确认 | 检查 Base URL 和路径是否写对 |
-| 怎么修 | 只填域名，让工具自己拼 `/v1/...` |
+| 怎么修 | 先对照下方表格按工具填写：Codex / OpenCode / GitHub Copilot CLI 的 Base URL 必须带 `/v1`，Claude Code 只填域名。 |
 
 常见原因：
 
