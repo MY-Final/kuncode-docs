@@ -66,4 +66,5 @@ Some pages use KunCode as a demo, which is just one option among many. For wheth
 - [Choose an endpoint](/en/guide/endpoints)
 - [Concepts](/en/guide/concepts)
 - [Models and capabilities](/en/guide/models)
+- [Managing multiple providers with CC Switch](/en/guide/cc-switch)
 - [Tools](/en/tools/)

@@ -190,7 +190,7 @@ $env:KUNCODE_API_KEY = "sk-xxxxxxxx"
 
 ## 进阶：用 CC Switch 一键导入
 
-如果你已经在用 [CC Switch](https://github.com/farion1231/cc-switch) 管理多个服务商，可以跳过手写配置：
+如果你已经在用 [CC Switch](/guide/cc-switch) 管理多个服务商，可以跳过手写配置：
 
 1. 在服务的 **API 密钥** 页面，找到目标令牌
 2. 点击「导入到 CC Switch」

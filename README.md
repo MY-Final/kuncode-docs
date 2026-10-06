@@ -60,6 +60,7 @@ docs/
     security.md         #   key storage, rotation and safety
     network.md          #   proxies, custom CAs and connectivity
     cost-control.md     #   budgets, limits and usage control
+    cc-switch.md        #   manage multiple providers with CC Switch
     errors.md           #   error codes and troubleshooting
   tools/                # 14 Chinese per-tool guides
     claude-code.md

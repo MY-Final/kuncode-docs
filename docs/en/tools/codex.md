@@ -190,7 +190,7 @@ To persist it, add the export to `~/.zshrc` or `~/.bashrc`, or set a system envi
 
 ## Advanced: import with CC Switch
 
-If you already use [CC Switch](https://github.com/farion1231/cc-switch) to manage providers, skip the manual config:
+If you already use [CC Switch](/en/guide/cc-switch) to manage providers, skip the manual config:
 
 1. Open the service's **API Keys** page and find your token
 2. Click **Import to CC Switch**

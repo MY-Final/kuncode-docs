@@ -54,6 +54,7 @@ const zhSidebar = [
       { text: 'API Key 安全与轮换', link: '/guide/security' },
       { text: '网络、代理与自定义 CA', link: '/guide/network' },
       { text: '成本控制', link: '/guide/cost-control' },
+      { text: 'CC Switch 多服务商管理', link: '/guide/cc-switch' },
     ],
   },
   {
@@ -139,6 +140,7 @@ const enSidebar = [
       { text: 'API Key Security and Rotation', link: '/en/guide/security' },
       { text: 'Network, Proxy and Custom CA', link: '/en/guide/network' },
       { text: 'Cost Control', link: '/en/guide/cost-control' },
+      { text: 'Managing Multiple Providers with CC Switch', link: '/en/guide/cc-switch' },
     ],
   },
   {

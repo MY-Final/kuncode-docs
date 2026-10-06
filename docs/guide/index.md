@@ -66,4 +66,5 @@
 - [选择接入方式](/guide/endpoints)
 - [概念说明](/guide/concepts)
 - [模型与能力](/guide/models)
+- [CC Switch：多服务商配置管理](/guide/cc-switch)
 - [工具列表](/tools/)
