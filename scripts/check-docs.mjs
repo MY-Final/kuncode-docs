@@ -5,6 +5,8 @@
  *   2. Every internal link must resolve to a real page.
  *   3. Internal anchors must exist in the built HTML.
  *   4. Every tool page must be listed in the tool index and the sidebar.
+ *   5. Homepage tool counts must match the number of per-tool pages.
+ *   6. Chinese and English tool pages must use the same verification date.
  *
  * Run `npm run build` first: anchor checks read docs/.vitepress/dist.
  */
@@ -121,14 +123,17 @@ for (const file of mdFiles) {
 /* ------------------------------------------------------------------ */
 /* 4. Tool pages must be wired into the index and the sidebar          */
 /* ------------------------------------------------------------------ */
+const nonToolPages = new Set(['index', 'compare'])
+const toolPages = walk(path.join(docsDir, 'tools'), (name) => name.endsWith('.md'))
+  .map((file) => path.basename(file, '.md'))
+  .filter((name) => !nonToolPages.has(name))
+
 const configPath = path.join(docsDir, '.vitepress', 'config.mts')
 const config = fs.existsSync(configPath) ? fs.readFileSync(configPath, 'utf8') : ''
 
 for (const locale of ['', 'en/']) {
   const indexFile = path.join(docsDir, `${locale}tools/index.md`)
   const index = fs.existsSync(indexFile) ? fs.readFileSync(indexFile, 'utf8') : ''
-  // Pages that live under tools/ but are not per-tool guides.
-  const nonToolPages = new Set(['index', 'compare'])
   const tools = walk(path.join(docsDir, `${locale}tools`), (name) => name.endsWith('.md'))
     .map((file) => path.basename(file, '.md'))
     .filter((name) => !nonToolPages.has(name))
@@ -144,6 +149,53 @@ for (const locale of ['', 'en/']) {
 }
 
 /* ------------------------------------------------------------------ */
+/* 5. Homepage tool counts must match the per-tool page count          */
+/* ------------------------------------------------------------------ */
+const zhHomePath = path.join(docsDir, 'index.md')
+const enHomePath = path.join(docsDir, 'en/index.md')
+const zhHome = fs.existsSync(zhHomePath) ? fs.readFileSync(zhHomePath, 'utf8') : ''
+const enHome = fs.existsSync(enHomePath) ? fs.readFileSync(enHomePath, 'utf8') : ''
+const toolCount = toolPages.length
+
+if (!zhHome.includes(`${toolCount} 个 AI 编程工具`)) {
+  fail(`[tool-count] docs/index.md is stale: expected "${toolCount} 个 AI 编程工具" (found ${toolCount} per-tool pages)`)
+}
+if (!enHome.includes(`${toolCount} AI coding tools`)) {
+  fail(`[tool-count] docs/en/index.md is stale: expected "${toolCount} AI coding tools" (found ${toolCount} per-tool pages)`)
+}
+
+/* ------------------------------------------------------------------ */
+/* 6. Verification dates must match across each tool page pair         */
+/* ------------------------------------------------------------------ */
+for (const tool of toolPages) {
+  const zhPath = path.join(docsDir, 'tools', `${tool}.md`)
+  const enPath = path.join(docsDir, 'en', 'tools', `${tool}.md`)
+  const pair = `docs/tools/${tool}.md and docs/en/tools/${tool}.md`
+
+  if (!fs.existsSync(enPath)) {
+    fail(`[verified-date] ${pair}: English counterpart is missing`)
+    continue
+  }
+
+  const zh = fs.readFileSync(zhPath, 'utf8')
+  const en = fs.readFileSync(enPath, 'utf8')
+  const zhDate = zh.match(/最后验证[：:]\s*(\d{4}-\d{2}-\d{2})/)
+  const enDate = en.match(/Last verified:\s*(\d{4}-\d{2}-\d{2})/)
+
+  if (!zhDate) {
+    fail(`[verified-date] ${pair}: missing a valid 最后验证 date`)
+    continue
+  }
+  if (!enDate) {
+    fail(`[verified-date] ${pair}: missing a valid Last verified date`)
+    continue
+  }
+  if (zhDate[1] !== enDate[1]) {
+    fail(`[verified-date] ${pair}: dates differ (${zhDate[1]} vs ${enDate[1]})`)
+  }
+}
+
+/* ------------------------------------------------------------------ */
 if (errors.length > 0) {
   console.error(`Documentation checks failed with ${errors.length} problem(s):\n`)
   for (const message of errors) console.error(`  - ${message}`)
@@ -151,4 +203,4 @@ if (errors.length > 0) {
   process.exit(1)
 }
 
-console.log(`Documentation checks passed (${mdFiles.length} pages, links, anchors, locale parity).`)
+console.log(`Documentation checks passed (${mdFiles.length} pages, links, anchors, locale parity, tool counts, verification dates).`)

@@ -15,11 +15,18 @@ bun install
 bun run dev
 ```
 
-## Build
+## Build and verify
 
 ```bash
-bun run build
-bun run preview
+npm run verify
+```
+
+`npm run verify` runs the VitePress build and then `node scripts/check-docs.mjs`. The checks cover Chinese/English locale parity, internal links, anchors in the built HTML, and tool pages being registered in both the tools index and the sidebar. They also verify that the homepage tool counts match the number of per-tool pages and that each Chinese/English tool page pair has the same `最后验证` / `Last verified` date.
+
+To preview a completed build locally:
+
+```bash
+npm run preview
 ```
 
 ## Deploy to GitHub Pages
@@ -35,18 +42,40 @@ The workflow injects `BASE_PATH=/<repo-name>/` so project pages resolve correctl
 ```
 docs/
   index.md              # Chinese home
+  beginner/             # beginner onboarding module
+    index.md            #   start here
+    quickstart.md       #   15-minute minimal setup
+    windows.md          #   Windows notes
+    free-models.md      #   free and trial models
+    first-run.md        #   let AI install and configure tools
+    prompts.md          #   configuration prompt library
+    help.md             #   what to do when setup fails
   guide/                # Chinese getting started
-    index.md            #   overview / three-step setup
-    api-key.md          #   create and copy an API key
-    endpoints.md        #   pick the right protocol endpoint
+    index.md            #   overview, placeholder conventions, three-step setup
     concepts.md         #   API keys, groups, channels, ratios, quota
-    models.md           #   list models, capabilities, per-tool requirements
+    api-key.md          #   create and copy an API key
+    endpoints.md        #   choose the right protocol endpoint
+    models.md           #   list models and capabilities
+    usage.md            #   what to do after setup
+    security.md         #   key storage, rotation and safety
+    network.md          #   proxies, custom CAs and connectivity
+    cost-control.md     #   budgets, limits and usage control
     errors.md           #   error codes and troubleshooting
-  tools/                # Chinese per-tool guides
-    codex.md
+  tools/                # 14 Chinese per-tool guides
     claude-code.md
-    opencode.md
+    cline.md
+    codebuddy.md
+    codex.md
     copilot.md
+    crush.md
+    gemini-cli.md
+    goose.md
+    kilo-code.md
+    opencode.md
+    piagent.md
+    qwen-code.md
+    trae.md
+    vscode-copilot.md
   faq.md
   en/                   # English mirror of the same tree
   public/               # static assets (images, logo, favicon)
@@ -58,10 +87,12 @@ Chinese pages live at the root (`docs/guide/...`); the English mirror lives unde
 
 1. Copy an existing page such as `docs/tools/opencode.md` to `docs/tools/<tool>.md`.
 2. Copy `docs/en/tools/opencode.md` to `docs/en/tools/<tool>.md` and translate it.
-3. Register both in the `zhSidebar` / `enSidebar` arrays in `docs/.vitepress/config.mts`, under the right protocol group (OpenAI-compatible or Anthropic-compatible).
-4. Add it to the tool table in `docs/tools/index.md` and `docs/en/tools/index.md`.
-5. Put screenshots under `docs/public/images/<tool>/` and reference them as `/images/<tool>/<name>.png`.
-6. Run `bun run build` before committing.
+3. Keep the `最后验证` / `Last verified` dates identical, and use the current date after re-checking the setup.
+4. Register both pages in the `zhSidebar` and `enSidebar` arrays in `docs/.vitepress/config.mts`.
+5. Add both pages to the tool tables in `docs/tools/index.md` and `docs/en/tools/index.md`.
+6. If the number of per-tool pages changes, update the tool count in `docs/index.md` and `docs/en/index.md`; `npm run check` enforces that it matches.
+7. Put screenshots under `docs/public/images/<tool>/` and reference them as `/images/<tool>/<name>.png`.
+8. Run `npm run verify` before committing.
 
 ## Conventions
 
