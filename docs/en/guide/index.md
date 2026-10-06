@@ -29,6 +29,8 @@ If you use an official API or self-hosted gateway, there may be no sign-in-to-pr
 
 New to API keys, groups, channels and ratios? Start with [Concepts](/en/guide/concepts).
 
+Want to just follow along once? See [15-minute minimal setup](/en/beginner/quickstart), which strings these three steps into one copy-pasteable command line using a single fixed set of placeholders.
+
 ## What you need
 
 | Item | Description |
