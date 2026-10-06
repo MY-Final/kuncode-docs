@@ -144,3 +144,9 @@ For a systematic walkthrough by status code, see [Errors and troubleshooting](/e
 | Request timeout | Network, proxy, slow service or a large request | Check DNS, proxy and firewall; reduce the request or retry later |
 | Tool calls fail | The model does not support tool calling, or its capabilities were not recognized correctly | Switch to a model that supports tool calling and check the model configuration in VS Code |
 | BYOK not taking effect | The custom model is not selected, the configuration was not saved, or your account/version does not support the entry point | Confirm the custom model is selected in Copilot Chat; reopen model management to check the configuration, and upgrade VS Code if needed |
+
+---
+
+::: tip Found an error or outdated content?
+These docs track tool releases. Please [open an issue](https://github.com/MY-Final/kuncode-docs/issues/new), or use "Edit this page on GitHub" in the footer to submit a fix.
+:::

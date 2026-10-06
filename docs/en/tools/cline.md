@@ -108,3 +108,9 @@ Cline's OpenAI Compatible provider uses the Chat Completions API. If your servic
 ::: warning Never commit your key
 If you export or share your Cline configuration, strip the API key first. Mask it in screenshots too.
 :::
+
+---
+
+::: tip Found an error or outdated content?
+These docs track tool releases. Please [open an issue](https://github.com/MY-Final/kuncode-docs/issues/new), or use "Edit this page on GitHub" in the footer to submit a fix.
+:::

@@ -265,3 +265,9 @@ Gemini CLI 只适用于 Gemini 原生协议或 Vertex AI。需要接入 OpenAI C
 - 认证文档：https://github.com/google-gemini/gemini-cli/blob/main/docs/get-started/authentication.mdx
 - 配置参考：https://github.com/google-gemini/gemini-cli/blob/main/docs/reference/configuration.md
 - 配额与价格：https://github.com/google-gemini/gemini-cli/blob/main/docs/resources/quota-and-pricing.md
+
+---
+
+::: tip 发现错误或有内容过期？
+文档会随工具版本更新。欢迎[提交 Issue](https://github.com/MY-Final/kuncode-docs/issues/new) 反馈问题，或直接点击页脚的「在 GitHub 上编辑此页」提交修改。
+:::

@@ -180,3 +180,9 @@ export GOOSE_MAX_TOKENS=8192
 
 - 仓库：https://github.com/aaif-goose/goose
 - 文档：https://goose-docs.ai/
+
+---
+
+::: tip 发现错误或有内容过期？
+文档会随工具版本更新。欢迎[提交 Issue](https://github.com/MY-Final/kuncode-docs/issues/new) 反馈问题，或直接点击页脚的「在 GitHub 上编辑此页」提交修改。
+:::

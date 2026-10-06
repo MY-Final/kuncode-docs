@@ -198,3 +198,9 @@ If you already use [CC Switch](https://github.com/farion1231/cc-switch) to manag
 4. Click **Open CC Switch**; the config is written for you
 
 The result is the same as the manual setup above, just without the typing.
+
+---
+
+::: tip Found an error or outdated content?
+These docs track tool releases. Please [open an issue](https://github.com/MY-Final/kuncode-docs/issues/new), or use "Edit this page on GitHub" in the footer to submit a fix.
+:::

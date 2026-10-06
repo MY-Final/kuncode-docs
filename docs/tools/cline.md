@@ -108,3 +108,9 @@ Cline 的 OpenAI Compatible provider 走 Chat Completions 接口。如果你的�
 ::: warning 不要提交密钥
 如果你把 Cline 配置导出或分享，注意先去掉 API Key。截图时也要打码。
 :::
+
+---
+
+::: tip 发现错误或有内容过期？
+文档会随工具版本更新。欢迎[提交 Issue](https://github.com/MY-Final/kuncode-docs/issues/new) 反馈问题，或直接点击页脚的「在 GitHub 上编辑此页」提交修改。
+:::

@@ -213,3 +213,9 @@ Official resources:
 
 - Repository: https://github.com/charmbracelet/crush
 - Website: https://charm.sh/crush
+
+---
+
+::: tip Found an error or outdated content?
+These docs track tool releases. Please [open an issue](https://github.com/MY-Final/kuncode-docs/issues/new), or use "Edit this page on GitHub" in the footer to submit a fix.
+:::

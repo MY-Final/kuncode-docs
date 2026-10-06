@@ -261,3 +261,9 @@ Official resources:
 - Authentication: https://github.com/google-gemini/gemini-cli/blob/main/docs/get-started/authentication.mdx
 - Configuration reference: https://github.com/google-gemini/gemini-cli/blob/main/docs/reference/configuration.md
 - Quotas and pricing: https://github.com/google-gemini/gemini-cli/blob/main/docs/resources/quota-and-pricing.md
+
+---
+
+::: tip Found an error or outdated content?
+These docs track tool releases. Please [open an issue](https://github.com/MY-Final/kuncode-docs/issues/new), or use "Edit this page on GitHub" in the footer to submit a fix.
+:::

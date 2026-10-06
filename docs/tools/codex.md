@@ -198,3 +198,9 @@ $env:KUNCODE_API_KEY = "sk-xxxxxxxx"
 4. 点击「打开 CC Switch」，配置会自动写入 `config.toml`
 
 导入后配置内容和上面手动写的一致，只是省去了手写步骤。
+
+---
+
+::: tip 发现错误或有内容过期？
+文档会随工具版本更新。欢迎[提交 Issue](https://github.com/MY-Final/kuncode-docs/issues/new) 反馈问题，或直接点击页脚的「在 GitHub 上编辑此页」提交修改。
+:::

@@ -119,3 +119,9 @@ If your service supports multiple endpoints, first check [API endpoints](/en/gui
 ::: warning Never commit your key
 Do not put the API key in files that get committed to Git, screenshots, or shared configurations. Mask it in screenshots.
 :::
+
+---
+
+::: tip Found an error or outdated content?
+These docs track tool releases. Please [open an issue](https://github.com/MY-Final/kuncode-docs/issues/new), or use "Edit this page on GitHub" in the footer to submit a fix.
+:::

@@ -318,3 +318,9 @@ If your gateway exposes an Anthropic Messages endpoint, set `api` to `anthropic-
 ::: warning The key is stored in plain text
 Keys in `models.json` are stored in plain text. Never commit the file with keys to Git, and mask it in screenshots and screen shares. Prefer the "keep the key in an environment variable" approach above.
 :::
+
+---
+
+::: tip Found an error or outdated content?
+These docs track tool releases. Please [open an issue](https://github.com/MY-Final/kuncode-docs/issues/new), or use "Edit this page on GitHub" in the footer to submit a fix.
+:::

@@ -220,3 +220,9 @@ export COPILOT_MODEL="claude-sonnet-4-5"
 ```
 
 For Azure OpenAI use `COPILOT_PROVIDER_TYPE=azure` and follow the official requirements for `COPILOT_PROVIDER_AZURE_API_VERSION`, `COPILOT_PROVIDER_MODEL_ID` and `COPILOT_PROVIDER_WIRE_MODEL`. Run `copilot help providers` for the full variable list.
+
+---
+
+::: tip Found an error or outdated content?
+These docs track tool releases. Please [open an issue](https://github.com/MY-Final/kuncode-docs/issues/new), or use "Edit this page on GitHub" in the footer to submit a fix.
+:::

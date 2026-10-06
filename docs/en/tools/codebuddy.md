@@ -131,3 +131,9 @@ Add more entries to the model array in `models.json`. Each entry uses its own `i
 ::: warning Never commit your key
 If the project-level `.codebuddy/models.json` contains an API key, add it to `.gitignore` and never commit it. Mask it in screenshots and shared configs too.
 :::
+
+---
+
+::: tip Found an error or outdated content?
+These docs track tool releases. Please [open an issue](https://github.com/MY-Final/kuncode-docs/issues/new), or use "Edit this page on GitHub" in the footer to submit a fix.
+:::

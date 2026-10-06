@@ -119,3 +119,9 @@ curl https://kuncode.120403.xyz/v1/models \
 ::: warning 不要提交密钥
 不要把 API Key 写进会提交到 Git 的文件、截图或分享配置中。截图时先打码。
 :::
+
+---
+
+::: tip 发现错误或有内容过期？
+文档会随工具版本更新。欢迎[提交 Issue](https://github.com/MY-Final/kuncode-docs/issues/new) 反馈问题，或直接点击页脚的「在 GitHub 上编辑此页」提交修改。
+:::

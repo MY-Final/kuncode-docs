@@ -254,3 +254,9 @@ KUNCODE_API_KEY=sk-xxxxxxxx
 Qwen Code 会自动加载，且 `.qwen/.env` 比 `.env` 更不容易和其他工具冲突。记得把它加入 `.gitignore`。
 
 更多配置项见 [Qwen Code 官方文档](https://qwenlm.github.io/qwen-code-docs/)。
+
+---
+
+::: tip 发现错误或有内容过期？
+文档会随工具版本更新。欢迎[提交 Issue](https://github.com/MY-Final/kuncode-docs/issues/new) 反馈问题，或直接点击页脚的「在 GitHub 上编辑此页」提交修改。
+:::
