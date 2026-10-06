@@ -26,7 +26,7 @@ Kilo Code 是编辑器扩展，直接在编辑器的扩展市场里安装，不�
 
 见 [准备 API Key](/guide/api-key)。记下两样东西：
 
-- **API Key**：`sk-` 开头
+- **API Key**：常见形如 `sk-...`，以你的服务商为准
 - **Base URL**：你的服务地址，例如 `https://kuncode.120403.xyz/v1`
 
 ## 3. 配置 provider

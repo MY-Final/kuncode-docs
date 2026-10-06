@@ -32,7 +32,7 @@ claude --version
 
 See [Prepare an API key](/en/guide/api-key). Note two things:
 
-- **API key** - starts with `sk-`
+- **API key** - usually looks like `sk-...`; use whatever format your provider issues
 - **API endpoint** - your service address, e.g. `https://kuncode.120403.xyz`
 
 ## 3. Find the config file

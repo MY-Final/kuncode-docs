@@ -42,7 +42,7 @@ qwen --version
 
 见 [准备 API Key](/guide/api-key)。记下两样东西：
 
-- **API Key**：例如 `sk-` 开头的密钥
+- **API Key**：常见形如 `sk-...`，以你的服务商为准
 - **API 节点**：你的服务地址，例如 `https://kuncode.120403.xyz`
 
 ## 3. 找到配置文件

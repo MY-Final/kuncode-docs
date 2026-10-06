@@ -33,7 +33,7 @@ After installing, a Cline icon appears in the VS Code sidebar. Click it to open 
 
 See [Prepare an API key](/en/guide/api-key). Note two things:
 
-- **API key** - starts with `sk-`
+- **API key** - usually looks like `sk-...`; use whatever format your provider issues
 - **Base URL** - your service address, e.g. `https://kuncode.120403.xyz/v1`
 
 ## 3. Configure the provider

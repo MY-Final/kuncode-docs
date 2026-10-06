@@ -26,7 +26,7 @@ After installing, a Kilo Code icon appears in the editor sidebar. Click it to op
 
 See [Prepare an API key](/en/guide/api-key). Note two things:
 
-- **API key** - starts with `sk-`
+- **API key** - usually looks like `sk-...`; use whatever format your provider issues
 - **Base URL** - your service address, e.g. `https://kuncode.120403.xyz/v1`
 
 ## 3. Configure the provider
