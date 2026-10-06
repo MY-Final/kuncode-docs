@@ -188,6 +188,17 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   sitemap: { hostname: siteUrl },
+  transformPageData(pageData) {
+    if (pageData.relativePath === '404.md') return
+
+    // Give every page a unique meta description when it has no frontmatter.
+    if (!pageData.frontmatter.description && pageData.title) {
+      const suffix = pageData.relativePath.startsWith('en/')
+        ? 'Provider-agnostic setup guide for AI coding tools.'
+        : '面向 AI 编程工具的服务接入与配置指南。'
+      pageData.description = `${pageData.title} - ${suffix}`
+    }
+  },
   transformHead({ page, title, description, siteData }) {
     if (page === '404.md') return []
 
@@ -198,14 +209,27 @@ export default defineConfig({
     const pageUrl = new URL(cleanPath, siteUrl).toString()
     const siteName = siteData.title ?? ''
 
+    const pageDescription = description || siteData.description
+
+    // Chinese lives at the root and English under /en/. Point each page at
+    // its counterpart so search engines can pick the right language.
+    const isEnglish = page.startsWith('en/')
+    const zhPath = isEnglish ? cleanPath.replace(/^en\//, '') : cleanPath
+    const enPath = isEnglish ? cleanPath : `en/${cleanPath}`
+    const zhUrl = new URL(zhPath, siteUrl).toString()
+    const enUrl = new URL(enPath, siteUrl).toString()
+
     return [
       ['link', { rel: 'canonical', href: pageUrl }],
+      ['link', { rel: 'alternate', hreflang: 'zh-CN', href: zhUrl }],
+      ['link', { rel: 'alternate', hreflang: 'en-US', href: enUrl }],
+      ['link', { rel: 'alternate', hreflang: 'x-default', href: zhUrl }],
       ['meta', { property: 'og:url', content: pageUrl }],
       ['meta', { property: 'og:site_name', content: siteName }],
       ['meta', { property: 'og:title', content: title }],
-      ['meta', { property: 'og:description', content: description }],
+      ['meta', { property: 'og:description', content: pageDescription }],
       ['meta', { name: 'twitter:title', content: title }],
-      ['meta', { name: 'twitter:description', content: description }],
+      ['meta', { name: 'twitter:description', content: pageDescription }],
     ]
   },
   head: [
