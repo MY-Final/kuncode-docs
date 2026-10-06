@@ -4,6 +4,12 @@ These issues are provider-agnostic and apply to any compatible gateway.
 
 For a systematic walkthrough by status code, see [Errors and troubleshooting](/en/guide/errors).
 
+::: tip Not set up yet, or not sure where to start?
+This page is organized by status code. It is meant for people who can already send requests and want to look up a specific error.
+
+If you are new to the command line, not set up yet, or unsure who to send an error to, start with [When setup fails](/en/beginner/help).
+:::
+
 ## 401 Unauthorized
 
 1. Make sure the key is complete with no whitespace.
