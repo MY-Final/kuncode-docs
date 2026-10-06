@@ -108,7 +108,14 @@ curl https://gateway.example.com/v1/messages \
 - **GitHub Copilot CLI**：默认使用 Chat Completions 入口，OpenAI 兼容模式的 Base URL 填 `https://gateway.example.com/v1`；需要 Responses 时设置 `COPILOT_PROVIDER_WIRE_API=responses`。
 
 ::: tip 不确定选哪个
-先看工具页要求哪个协议，再对照本页的最小请求和 Base URL 表。不要把 Chat Completions 当作所有工具的通用兜底；Codex 需要 Responses，Claude Code 需要 Anthropic Messages。
+先看工具页要求哪个协议，再对照本页的最小请求和 Base URL 表。
+
+**如果你完全不确定服务支持哪个入口**，按这个顺序试：
+
+1. 先确认工具**必须**用哪个入口：Codex 只能用 Responses；Claude Code 只能用 Anthropic Messages；OpenCode 和 Copilot CLI 在 Responses 与 Chat Completions 之间可选。
+2. 对可选的工具，先查服务商文档或控制台有没有 `/v1/responses`；有就用 Responses，没有就改用 Chat Completions（`/v1/chat/completions`）。
+3. 查不到时，先用 Chat Completions 试一次——它是最常见的兼容入口；报 `404` / `503` 再换成 Responses 试。
+4. 不要把 Chat Completions 当作所有工具的通用兜底：它救不了 Codex（需要 Responses）和 Claude Code（需要 Anthropic Messages）。
 :::
 
 ## 认证说明

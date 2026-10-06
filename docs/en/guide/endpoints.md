@@ -108,7 +108,14 @@ For the same key and model:
 - **GitHub Copilot CLI**: use Chat Completions by default and set the OpenAI-compatible Base URL to `https://gateway.example.com/v1`; set `COPILOT_PROVIDER_WIRE_API=responses` when Responses is required.
 
 ::: tip Not sure which one
-Check the tool guide first, then use the Base URL table and minimal requests on this page. Do not treat Chat Completions as a universal fallback: Codex needs Responses, and Claude Code needs Anthropic Messages.
+Check the tool guide first, then use the Base URL table and minimal requests on this page.
+
+**If you have no idea which endpoint your service supports**, try this order:
+
+1. First confirm which endpoint the tool *requires*: Codex only speaks Responses; Claude Code only speaks Anthropic Messages; OpenCode and Copilot CLI can use either Responses or Chat Completions.
+2. For tools with a choice, check the provider docs or console for a `/v1/responses` endpoint. If it exists, use Responses; if not, use Chat Completions (`/v1/chat/completions`).
+3. If you cannot find out, try Chat Completions first - it is the most common compatible endpoint. If you get `404` or `503`, switch to Responses and try again.
+4. Do not treat Chat Completions as a universal fallback: it will not rescue Codex (needs Responses) or Claude Code (needs Anthropic Messages).
 :::
 
 ## Authentication

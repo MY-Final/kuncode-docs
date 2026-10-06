@@ -99,7 +99,14 @@ Field reference:
 - `@ai-sdk/openai` - uses the Responses API (`/v1/responses`)
 - `@ai-sdk/openai-compatible` - uses Chat Completions (`/v1/chat/completions`)
 
-Both work. Prefer the former if your service recommends Responses; use the latter if it only speaks Chat Completions.
+Both work. The example above uses `@ai-sdk/openai` (Responses), because it has been verified against KunCode.
+
+**If you are not sure which API your service supports**, try them in this order:
+
+1. Check the provider console or documentation for a `/v1/responses` endpoint.
+2. If it is supported, or you cannot confirm either way, start with the default example above (Responses).
+3. If the request returns `404` or `503`, the service most likely only speaks Chat Completions. Change `npm` to `@ai-sdk/openai-compatible` and try again.
+4. If both fail, first check that your Base URL ends with `/v1`, then troubleshoot with [Choose an endpoint](/en/guide/endpoints).
 :::
 
 ::: tip Keys under models must be real model IDs

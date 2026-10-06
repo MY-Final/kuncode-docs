@@ -99,7 +99,14 @@ OpenCode 的全局配置文件位于：
 - `@ai-sdk/openai` → 走 Responses 接口（`/v1/responses`）
 - `@ai-sdk/openai-compatible` → 走 Chat Completions 接口（`/v1/chat/completions`）
 
-两者都能用。如果你的服务更推荐 Responses，用前者；只支持 Chat Completions 就用后者。
+两者都能用。上面的示例用 `@ai-sdk/openai`（Responses），因为 KunCode 已验证支持它。
+
+**不确定你的服务支持哪个接口时**，先按下面顺序试：
+
+1. 先在服务商控制台或文档里确认是否提供 `/v1/responses`。
+2. 如果确认支持 Responses，或者一时无法确认，先用上面的默认示例（Responses）试一次。
+3. 如果请求报 `404` / `503`，说明服务很可能只有 Chat Completions，把 `npm` 改成 `@ai-sdk/openai-compatible` 再试。
+4. 两种都失败时，先回头核对 Base URL 是否以 `/v1` 结尾，再按[选择接入方式](/guide/endpoints)排查。
 :::
 
 ::: tip models 里的键必须是真实模型 ID
